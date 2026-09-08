@@ -4,219 +4,359 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تجارب عسير | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=133">
 </head>
-<body data-page="experiences" data-header="solid">
-  <section class="listing-hero">
-    <img class="listing-hero__bg" src="assets/img/experiences/hero.png" alt="">
+<body data-page="experiences" data-header="transparent">
+  <section class="listing-hero listing-hero--home">
+    <img class="listing-hero__bg" src="assets/img/exp-hero-bg.png" alt="">
     <div class="listing-hero__overlay"></div>
     <div class="listing-hero__copy">
       <p class="crumb">الرئيسية  /  تجارب عسير</p>
       <h1>تجارب عسير</h1>
       <p class="listing-hero__sub">اكتشف الجبل والثقافة والطبيعة واللحظات المحلية في رحلة واحدة</p>
+      <div class="hero-pills">
+        <span>مغامرة جبلية</span>
+        <span>ثقافة أصيلة</span>
+        <span>طبيعة خلابة</span>
+      </div>
     </div>
   </section>
 
-  <div class="listing-filter">
-    <form class="listing-filter__row" action="experiences.html">
-      <label>
-        ابحث عن تجربة
-        <input type="search" name="q" placeholder="ابحث عن تجربة أو مكان أو نشاط...">
-      </label>
-      <button class="btn btn-gold listing-filter__btn" type="submit">تصفية</button>
-    </form>
-    <div class="listing-chips" data-filter-chips>
-      <button class="chip is-active" type="button" data-filter="all">الكل</button>
-      <button class="chip" type="button" data-filter="القمم">القمم</button>
-      <button class="chip" type="button" data-filter="الطبيعة">الطبيعة</button>
-      <button class="chip" type="button" data-filter="الثقافة">الثقافة</button>
-      <button class="chip" type="button" data-filter="المطاعم">المطاعم</button>
-      <button class="chip" type="button" data-filter="المسارات">المسارات</button>
-      <button class="chip" type="button" data-filter="الجلسات">الجلسات</button>
-      <button class="chip" type="button" data-filter="العوائل">العوائل</button>
-      <button class="chip" type="button" data-filter="المواسم">المواسم</button>
+  <div class="container">
+    <div class="exp-discovery">
+      <form class="exp-discovery-bar" action="experiences.html">
+        <div class="exp-discovery-search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="q" data-listing-search placeholder="ابحث عن تجربة أو مكان أو نشاط...">
+        </div>
+        <button class="exp-discovery-filter-btn" type="submit">تصفية</button>
+      </form>
+      <div class="chip-row exp-discovery-chips" data-filter-chips>
+        <button class="chip is-active" type="button" data-filter="all">الكل</button>
+        <button class="chip" type="button" data-filter="القمم">القمم</button>
+        <button class="chip" type="button" data-filter="الطبيعة">الطبيعة</button>
+        <button class="chip" type="button" data-filter="الثقافة">الثقافة</button>
+        <button class="chip" type="button" data-filter="المطاعم">المطاعم</button>
+        <button class="chip" type="button" data-filter="المسارات">المسارات</button>
+        <button class="chip" type="button" data-filter="الجلسات">الجلسات</button>
+        <button class="chip" type="button" data-filter="العوائل">العوائل</button>
+        <button class="chip" type="button" data-filter="المواسم">المواسم</button>
+      </div>
     </div>
   </div>
 
-  <section class="section section--white">
-    <div class="container">
-      <article class="featured-split">
-        <img src="assets/img/experiences/featured.png" alt="جلسة فوق السحاب">
-        <div class="copy">
-          <p class="muted">تجربة مختارة</p>
-          <h2>جلسة فوق السحاب</h2>
-          <p>السودة - منتزه السودة</p>
-          <p>★ 4.9   (326 تقييم)</p>
-          <div class="filters">
-            <span class="tag">جلسات خارجية</span>
-            <span class="tag">مناسب للعائلة</span>
-            <span class="tag">طبيعة جبلية</span>
-          </div>
-          <p>استمتع بجلسة هادئة على ارتفاع فوق الغيم، مع مشروب دافئ وإطلالة تمنحك إحساس عسير الحقيقي.</p>
-          <a class="btn btn-gold" href="experience-details.html">احجز تجربتك الآن</a>
+  <p class="exp-filter-empty container" data-filter-empty hidden>لا توجد تجارب مطابقة. جرّب تصفية أخرى.</p>
+
+  <section class="section container" data-filter-section>
+    <div class="exp-featured" data-filter-item data-tags="الجلسات العوائل الطبيعة القمم الشتاء">
+      <div class="exp-featured-card">
+        <div class="exp-featured-badge">
+          <span>تجربة مختارة</span>
+          <img class="mark" src="assets/icons/exp-badge-star.svg" width="28" height="28" alt="">
         </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">اختر تجربتك حسب المزاج</h2>
-      <div class="mood-grid">
-        <a class="mood-card" href="experiences.html"><h3>مغامرة</h3><p>نشاط وحماس</p></a>
-        <a class="mood-card" href="experiences.html"><h3>هدوء</h3><p>استرخاء وتجدد</p></a>
-        <a class="mood-card" href="experiences.html"><h3>تراث</h3><p>ثقافة وهوية</p></a>
-        <a class="mood-card" href="experiences.html"><h3>مذاق</h3><p>نكهات محلية</p></a>
-        <a class="mood-card" href="experiences.html"><h3>عائلة</h3><p>لحظات تجمعنا</p></a>
-        <a class="mood-card" href="experiences.html"><h3>تصوير</h3><p>لقطات ملهمة</p></a>
+        <div>
+          <h3>جلسة فوق السحاب</h3>
+          <div class="exp-featured-meta" style="margin-top:16px">
+            <span class="loc">السودة - منتزه السودة</span>
+            <span class="rating">★ 4.9   (326 تقييم)</span>
+          </div>
+        </div>
+        <div class="exp-featured-features">
+          <div class="exp-featured-feature">
+            <span class="ico"><img src="assets/icons/exp-feat-mountain.svg" width="28" height="28" alt=""></span>
+            <span>طبيعة جبلية</span>
+          </div>
+          <div class="exp-featured-feature">
+            <span class="ico"><img src="assets/icons/exp-feat-family.svg" width="28" height="28" alt=""></span>
+            <span>مناسب للعائلة</span>
+          </div>
+          <div class="exp-featured-feature">
+            <span class="ico"><img src="assets/icons/exp-feat-outdoor.svg" width="28" height="28" alt=""></span>
+            <span>جلسات خارجية</span>
+          </div>
+        </div>
+        <div>
+          <p class="exp-featured-desc">استمتع بجلسة هادئة على ارتفاع فوق الغيم، مع مشروب دافئ وإطلالة تمنحك إحساس عسير الحقيقي.</p>
+          <div class="exp-featured-actions" style="margin-top:12px">
+            <button class="exp-featured-save" type="button" data-save="exp:clouds" aria-label="حفظ"><img src="assets/icons/exp-heart-dark.svg" width="20" height="18" alt=""></button>
+            <a href="experience-details.html?id=clouds" class="exp-featured-book">احجز تجربتك الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="exp-featured-photo">
+        <img src="assets/img/exp-featured.png" alt="جلسة فوق السحاب">
       </div>
     </div>
   </section>
 
-  <section class="section section--white">
+  <section class="exp-mood" data-filter-section>
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">تجارب مختارة</h2>
-        <a class="section-link" href="experiences.html">عرض كل التجارب ←</a>
+      <div class="exp-mood-head">
+        <h2>اختر تجربتك حسب المزاج</h2>
       </div>
-      <div class="place-grid">
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="المسارات مغامرة">
-          <img class="place-card__img" src="assets/img/experiences/card-1.png" alt="">
-          <h3>مسار رجال ألمع الجبلي</h3>
-          <p class="place-card__loc">رجال ألمع</p>
-          <div class="place-card__foot"><span class="tag">سهل  ·  4 ساعات</span><span class="tag">مغامرة</span></div>
+      <div class="grid grid-3 exp-mood-row">
+        <a href="experiences.html?filter=تصوير#exp-selected" class="exp-mood-card" data-filter-item data-tags="تصوير القمم">
+          <img src="assets/img/exp-mood-photography.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-photo.svg" width="24" height="24" alt="">
+          <h3>تصوير</h3>
+          <p>لقطات ملهمة</p>
         </a>
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="الثقافة">
-          <img class="place-card__img" src="assets/img/experiences/card-2.png" alt="">
-          <h3>قرية رجال ألمع التراثية</h3>
-          <p class="place-card__loc">رجال ألمع</p>
-          <div class="place-card__foot"><span class="tag">سهل  ·  ساعتان</span><span class="tag">ثقافة</span></div>
+        <a href="experiences.html?filter=العوائل#exp-selected" class="exp-mood-card" data-filter-item data-tags="العوائل عائلة">
+          <img src="assets/img/exp-mood-family.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-family.svg" width="24" height="24" alt="">
+          <h3>عائلة</h3>
+          <p>لحظات تجمعنا</p>
         </a>
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="الطبيعة">
-          <img class="place-card__img" src="assets/img/experiences/card-3.png" alt="">
-          <h3>شلالات الدهناء</h3>
-          <p class="place-card__loc">تنومة</p>
-          <div class="place-card__foot"><span class="tag">سهل  ·  3 ساعات</span><span class="tag">طبيعة</span></div>
+        <a href="experiences.html?filter=المطاعم#exp-selected" class="exp-mood-card" data-filter-item data-tags="المطاعم مذاق">
+          <img src="assets/img/exp-mood-taste.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-taste.svg" width="24" height="24" alt="">
+          <h3>مذاق</h3>
+          <p>نكهات محلية</p>
         </a>
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="الجلسات">
-          <img class="place-card__img" src="assets/img/experiences/card-4.png" alt="">
-          <h3>جلسة المطل</h3>
-          <p class="place-card__loc">أبها</p>
-          <div class="place-card__foot"><span class="tag">سهل  ·  ساعتان</span><span class="tag">جلسات</span></div>
+        <a href="experiences.html?filter=الثقافة#exp-selected" class="exp-mood-card" data-filter-item data-tags="الثقافة تراث">
+          <img src="assets/img/exp-mood-heritage.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-heritage.svg" width="24" height="24" alt="">
+          <h3>تراث</h3>
+          <p>ثقافة وهوية</p>
         </a>
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="المطاعم مذاق">
-          <img class="place-card__img" src="assets/img/experiences/card-5.png" alt="">
-          <h3>تجربة العشاء الجبلي</h3>
-          <p class="place-card__loc">أبها</p>
-          <div class="place-card__foot"><span class="tag">سهل · ساعتان</span><span class="tag">مذاق</span></div>
+        <a href="experiences.html?filter=الجلسات#exp-selected" class="exp-mood-card" data-filter-item data-tags="الجلسات هدوء">
+          <img src="assets/img/exp-mood-calm.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-calm.svg" width="24" height="24" alt="">
+          <h3>هدوء</h3>
+          <p>استرخاء وتجدد</p>
         </a>
-        <a class="place-card" href="experience-details.html" data-filter-item data-tags="القمم تصوير">
-          <img class="place-card__img" src="assets/img/experiences/card-6.png" alt="">
+        <a href="experiences.html?filter=المسارات#exp-selected" class="exp-mood-card" data-filter-item data-tags="المسارات القمم مغامرة">
+          <img src="assets/img/exp-mood-adventure.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/exp-mood-adventure.svg" width="24" height="24" alt="">
+          <h3>مغامرة</h3>
+          <p>نشاط وحماس</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp-selected container" id="exp-selected" data-filter-section>
+    <div class="exp-section-head">
+      <h2>تجارب مختارة</h2>
+      <a href="experiences.html#exp-selected" class="view-all" data-filter-reset>عرض كل التجارب ←</a>
+    </div>
+    <div class="grid grid-3 exp-selected-row">
+      <a href="experience-details.html?id=sunrise" class="exp-card" data-filter-item data-tags="تصوير القمم الربيع">
+        <img src="assets/img/exp-card-sunrise.png" alt="">
+        <span class="exp-card-tag">تصوير</span>
+        <div class="exp-card-body">
           <h3>جولة شروق الشمس</h3>
-          <p class="place-card__loc">السودة</p>
-          <div class="place-card__foot"><span class="tag">متوسط  ·  3 ساعات</span><span class="tag">تصوير</span></div>
+          <span>السودة</span>
+        </div>
+        <div class="exp-card-meta"><span>متوسط  ·  3 ساعات</span><button class="heart exp-save" type="button" data-save="exp:sunrise" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+      <a href="experience-details.html?id=dinner" class="exp-card" data-filter-item data-tags="المطاعم مذاق الخريف">
+        <img src="assets/img/exp-card-dinner.png" alt="">
+        <span class="exp-card-tag">مذاق</span>
+        <div class="exp-card-body">
+          <h3>تجربة العشاء الجبلي</h3>
+          <span>أبها</span>
+        </div>
+        <div class="exp-card-meta"><span>سهل · ساعتان</span><button class="heart exp-save" type="button" data-save="exp:dinner" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+      <a href="experience-details.html?id=viewpoint" class="exp-card" data-filter-item data-tags="الجلسات هدوء الصيف">
+        <img src="assets/img/exp-card-viewpoint.png" alt="">
+        <span class="exp-card-tag">جلسات</span>
+        <div class="exp-card-body">
+          <h3>جلسة المطل</h3>
+          <span>أبها</span>
+        </div>
+        <div class="exp-card-meta"><span>سهل  ·  ساعتان</span><button class="heart exp-save" type="button" data-save="exp:viewpoint" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+      <a href="experience-details.html?id=waterfalls" class="exp-card" data-filter-item data-tags="الطبيعة الربيع">
+        <img src="assets/img/exp-card-waterfalls.png" alt="">
+        <span class="exp-card-tag">طبيعة</span>
+        <div class="exp-card-body">
+          <h3>شلالات الدهناء</h3>
+          <span>تنومة</span>
+        </div>
+        <div class="exp-card-meta"><span>سهل  ·  3 ساعات</span><button class="heart exp-save" type="button" data-save="exp:waterfalls" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+      <a href="experience-details.html?id=heritage" class="exp-card" data-filter-item data-tags="الثقافة تراث الخريف">
+        <img src="assets/img/exp-card-heritage-village.png" alt="">
+        <span class="exp-card-tag">ثقافة</span>
+        <div class="exp-card-body">
+          <h3>قرية رجال ألمع التراثية</h3>
+          <span>رجال ألمع</span>
+        </div>
+        <div class="exp-card-meta"><span>سهل  ·  ساعتان</span><button class="heart exp-save" type="button" data-save="exp:heritage" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+      <a href="experience-details.html?id=trail" class="exp-card" data-filter-item data-tags="المسارات القمم مغامرة الصيف">
+        <img src="assets/img/exp-card-mountain-trail.png" alt="">
+        <span class="exp-card-tag">مغامرة</span>
+        <div class="exp-card-body">
+          <h3>مسار رجال ألمع الجبلي</h3>
+          <span>رجال ألمع</span>
+        </div>
+        <div class="exp-card-meta"><span>سهل  ·  4 ساعات</span><button class="heart exp-save" type="button" data-save="exp:trail" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="exp-region">
+    <div class="container">
+      <div class="exp-section-head">
+        <h2>ابدأ من المنطقة أو القمة</h2>
+        <a href="peaks.html" class="view-all">عرض كل المناطق ←</a>
+      </div>
+      <div class="exp-region-layout">
+        <a href="soudah.html" class="exp-region-card exp-region-card--feature">
+          <img src="assets/img/exp-region-soudah.png" alt="" aria-hidden="true">
+          <div class="exp-region-card-content">
+            <b>السودة</b>
+            <span>22 تجربة</span>
+          </div>
         </a>
+        <div class="exp-region-grid">
+          <a href="abha.html" class="exp-region-card">
+            <img src="assets/img/exp-region-abha.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>أبها</b>
+              <span>72 تجربة</span>
+            </div>
+          </a>
+          <a href="tanomah.html" class="exp-region-card">
+            <img src="assets/img/exp-region-tanomah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>تنومة</b>
+              <span>46 تجربة</span>
+            </div>
+          </a>
+          <a href="al-namas.html" class="exp-region-card">
+            <img src="assets/img/exp-region-alnamas.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>النماص</b>
+              <span>9 تجارب</span>
+            </div>
+          </a>
+          <a href="rijal-alma.html" class="exp-region-card">
+            <img src="assets/img/exp-region-rijalalmaa.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>رجال ألمع</b>
+              <span>29 تجربة</span>
+            </div>
+          </a>
+          <a href="ballasmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balasmer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>بللسمر</b>
+              <span>28 تجربة</span>
+            </div>
+          </a>
+          <a href="ballahmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balhamer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content">
+              <b>بللحمر</b>
+              <span>22 تجربة</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">ابدأ من المنطقة أو القمة</h2>
-        <a class="section-link" href="peaks.html">عرض كل المناطق ←</a>
-      </div>
-      <div class="region-food-grid" style="grid-template-columns:repeat(7,minmax(0,160px))">
-        <a class="region-food" href="soudah.html"><img src="assets/img/experiences/reg-7.png" alt=""><div><h3>السودة</h3><p>22 تجربة</p></div></a>
-        <a class="region-food" href="abha.html"><img src="assets/img/experiences/reg-6.png" alt=""><div><h3>أبها</h3><p>72 تجربة</p></div></a>
-        <a class="region-food" href="tanomah.html"><img src="assets/img/experiences/reg-5.png" alt=""><div><h3>تنومة</h3><p>46 تجربة</p></div></a>
-        <a class="region-food" href="al-namas.html"><img src="assets/img/experiences/reg-4.png" alt=""><div><h3>النماص</h3><p>9 تجارب</p></div></a>
-        <a class="region-food" href="rijal-alma.html"><img src="assets/img/experiences/reg-3.png" alt=""><div><h3>رجال ألمع</h3><p>29 تجربة</p></div></a>
-        <a class="region-food" href="ballasmar.html"><img src="assets/img/experiences/reg-2.png" alt=""><div><h3>بللسمر</h3><p>28 تجربة</p></div></a>
-        <a class="region-food" href="ballahmar.html"><img src="assets/img/experiences/reg-1.png" alt=""><div><h3>بللحمر</h3><p>22 تجربة</p></div></a>
-      </div>
+  <section class="exp-routes container" id="exp-routes" data-filter-section>
+    <div class="exp-section-head">
+      <h2>مسارات جاهزة</h2>
+      <a href="#exp-routes" class="view-all" data-filter-reset>عرض كل المسارات ←</a>
     </div>
-  </section>
-
-  <section class="section section--white">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">مسارات جاهزة</h2>
-        <a class="section-link" href="route-details.html">عرض كل المسارات ←</a>
-      </div>
-      <div class="route-grid">
-        <a class="place-card" href="route-details.html">
-          <img class="place-card__img" src="assets/img/experiences/card-4.png" alt="">
-          <div class="body" style="padding:16px 24px">
+    <div class="exp-routes-row">
+      <a href="route-details.html?id=cloud" class="exp-route-card" data-filter-item data-tags="القمم الجلسات الطبيعة الشتاء">
+        <div class="exp-route-photo"><img src="assets/img/exp-route-cloud.png" alt=""></div>
+        <div class="exp-route-details">
+          <div>
             <h3>يوم فوق الغيم</h3>
             <p>رحلة يوم واحد في السودة مع جلسة ومناظر لا تنسى.</p>
-            <span class="tag">يوم واحد  ·  سهل</span>
           </div>
-        </a>
-        <a class="place-card" href="route-details.html">
-          <img class="place-card__img" src="assets/img/experiences/card-1.png" alt="">
-          <div class="body" style="padding:16px 24px">
+          <span class="meta">يوم واحد  ·  سهل</span>
+        </div>
+      </a>
+      <a href="route-details.html?id=peaks3" class="exp-route-card" data-filter-item data-tags="القمم المسارات الثقافة">
+        <div class="exp-route-photo"><img src="assets/img/exp-route-3days.png" alt=""></div>
+        <div class="exp-route-details">
+          <div>
             <h3>٣ أيام بين القمم</h3>
             <p>اكتشف القرى التراثية والمسارات والجلسات في قمم عسير.</p>
-            <span class="tag">٣ أيام · متوسط</span>
           </div>
-        </a>
-        <a class="place-card" href="route-details.html">
-          <img class="place-card__img" src="assets/img/experiences/featured.png" alt="">
-          <div class="body" style="padding:16px 24px">
+          <span class="meta">٣ أيام · متوسط</span>
+        </div>
+      </a>
+      <a href="route-details.html?id=family" class="exp-route-card" data-filter-item data-tags="العوائل الجلسات المطاعم الصيف">
+        <div class="exp-route-photo"><img src="assets/img/exp-route-family.png" alt=""></div>
+        <div class="exp-route-details">
+          <div>
             <h3>عطلة عائلية</h3>
             <p>أنشطة هادئة، جلسات، حدائق، طبيعة ومطاعم محلية.</p>
-            <span class="tag">يومان · سهل</span>
           </div>
-        </a>
-      </div>
+          <span class="meta">يومان · سهل</span>
+        </div>
+      </a>
     </div>
   </section>
 
-  <section class="section">
+  <section class="exp-season" id="exp-season" data-filter-section>
     <div class="container">
-      <h2 class="section-title">حسب الموسم</h2>
-      <div class="season-grid">
-        <article class="season-card">
-          <h3>الشتاء</h3>
-          <p>أجواء الضباب والبرد</p>
-          <p>جلسات دافئة، ضباب كثيف، وتجارب فريدة.</p>
-          <a href="experiences.html">استكشف تجارب الشتاء</a>
-        </article>
-        <article class="season-card">
-          <h3>الخريف</h3>
-          <p>ألوان ومواسم</p>
-          <p>أجواء لطيفة، مهرجانات، ووجوه تراثية.</p>
-          <a href="experiences.html">استكشف تجارب الخريف</a>
-        </article>
-        <article class="season-card">
-          <h3>الصيف</h3>
-          <p>ظلال الجبل والأنشطة</p>
-          <p>أجواء باردة، فعاليات صيفية، وأنشطة عائلية.</p>
-          <a href="experiences.html">استكشف تجارب الصيف</a>
-        </article>
-        <article class="season-card">
-          <h3>الربيع</h3>
-          <p>ازدهار الطبيعة</p>
-          <p>زهور الربيع، الأجواء المعتدلة، المغامرات والرحلات.</p>
-          <a href="experiences.html">استكشف تجارب الربيع</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="listing-cta">
-        <img src="assets/img/experiences/hero.png" alt="">
-        <div class="listing-cta__copy">
-          <h2>حان وقت المغامرة</h2>
-          <p>خطط رحلتك إلى عسير واكتشف تجارب لا تنسى بين الجبال والطبيعة والثقافة المحلية.</p>
-          <a class="btn btn-gold" href="plan.html">خطط رحلتك الآن</a>
+      <div class="exp-season-head"><h2>حسب الموسم</h2></div>
+      <div class="exp-season-row">
+        <div class="exp-season-card" data-filter-item data-tags="المواسم الربيع">
+          <img src="assets/img/exp-season-spring.png" alt="" aria-hidden="true">
+          <div class="exp-season-body">
+            <h3>الربيع</h3>
+            <p class="sub">ازدهار الطبيعة</p>
+            <hr>
+            <p>زهور الربيع، الأجواء المعتدلة، المغامرات والرحلات.</p>
+          </div>
+          <a href="experiences.html?filter=الربيع#exp-selected" class="exp-season-btn">استكشف تجارب الربيع</a>
+        </div>
+        <div class="exp-season-card" data-filter-item data-tags="المواسم الصيف">
+          <img src="assets/img/exp-season-summer.png" alt="" aria-hidden="true">
+          <div class="exp-season-body">
+            <h3>الصيف</h3>
+            <p class="sub">ظلال الجبل والأنشطة</p>
+            <hr>
+            <p>أجواء باردة، فعاليات صيفية، وأنشطة عائلية.</p>
+          </div>
+          <a href="experiences.html?filter=الصيف#exp-selected" class="exp-season-btn">استكشف تجارب الصيف</a>
+        </div>
+        <div class="exp-season-card" data-filter-item data-tags="المواسم الخريف">
+          <img src="assets/img/exp-season-autumn.png" alt="" aria-hidden="true">
+          <div class="exp-season-body">
+            <h3>الخريف</h3>
+            <p class="sub">ألوان ومواسم</p>
+            <hr>
+            <p>أجواء لطيفة، مهرجانات، ووجوه تراثية.</p>
+          </div>
+          <a href="experiences.html?filter=الخريف#exp-selected" class="exp-season-btn">استكشف تجارب الخريف</a>
+        </div>
+        <div class="exp-season-card" data-filter-item data-tags="المواسم الشتاء">
+          <img src="assets/img/exp-season-winter.png" alt="" aria-hidden="true">
+          <div class="exp-season-body">
+            <h3>الشتاء</h3>
+            <p class="sub">أجواء الضباب والبرد</p>
+            <hr>
+            <p>جلسات دافئة، ضباب كثيف، وتجارب فريدة.</p>
+          </div>
+          <a href="experiences.html?filter=الشتاء#exp-selected" class="exp-season-btn">استكشف تجارب الشتاء</a>
         </div>
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+
+  <section class="section container">
+    <div class="exp-cta">
+      <div class="exp-cta-bg"><img src="assets/img/exp-cta-photo.png" alt="" aria-hidden="true"></div>
+      <div class="exp-cta-content">
+        <h2>حان وقت المغامرة</h2>
+        <p>خطط رحلتك إلى عسير واكتشف تجارب لا تنسى بين الجبال والطبيعة والثقافة المحلية.</p>
+        <a href="plan.html" class="exp-cta-btn">خطط رحلتك الآن</a>
+      </div>
+    </div>
+  </section>
+  <script src="script.js?v=35"></script>
 </body>
 </html>

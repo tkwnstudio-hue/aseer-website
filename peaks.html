@@ -4,11 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>القمم | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=155">
 </head>
-<body data-page="explore" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/region-peaks.png')"><div class="copy"><p class="crumb">الرئيسية / القمم</p><h1>القمم</h1><p>قمم شاهقة وضباب لا ينتهي</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p>قمم شاهقة وضباب لا ينتهي</p><p><a class="btn btn-gold" href="soudah.html">استكشف السودة</a></p></div></div></section>
-<script src="script.js"></script>
+<body data-page="peaks" data-header="transparent">
+  <section class="hero-peaks">
+    <div class="hero-peaks-bg" aria-hidden="true">
+      <img class="scenic" src="assets/img/peaks/hero.jpg" alt="قمم عسير والضباب">
+    </div>
+    <div class="hero-peaks-content">
+      <p class="eyebrow">استكشف عسير / القمم</p>
+      <h1>القمم</h1>
+      <span class="hero-peaks-headline">حيث يبدأ الضباب وتعلو الحكاية</span>
+      <p>رحلة بين قمم عسير ووجهاتها الجبلية، من أبها والسودة إلى تنومة والنماص وبللسمر.</p>
+      <div class="hero-actions">
+        <a class="btn btn-hero-white" href="#pk-destinations">استكشف الوجهات</a>
+        <a class="btn btn-hero-gold" href="plan.html">خطط رحلة بين القمم</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pk-dest" id="pk-destinations">
+    <div class="container">
+      <header class="pk-block-head">
+        <h2>وجهات القمم</h2>
+        <p>اختر وجهتك بين قمم عسير ومدنها الجبلية، من أبها حتى بللسمر.</p>
+      </header>
+      <!-- RTL: first = rightmost (أبها) — الترتيب المعتمد -->
+      <div class="grid grid-5 pk-dest-rail">
+        <a class="pk-dest-card" href="abha.html">
+          <img class="scenic" src="assets/img/peaks/abha.jpg" alt="أبها بين الجبال">
+          <span class="pk-dest-mark" aria-hidden="true">△</span>
+          <div class="pk-dest-info">
+            <span class="pk-dest-accent" aria-hidden="true"></span>
+            <h3>أبها</h3>
+            <p>مدينة بين الجبال</p>
+          </div>
+        </a>
+        <a class="pk-dest-card" href="soudah.html">
+          <img class="scenic" src="assets/img/peaks/soudah.jpg" alt="قمم السودة والضباب">
+          <span class="pk-dest-mark" aria-hidden="true">△</span>
+          <div class="pk-dest-info">
+            <span class="pk-dest-accent" aria-hidden="true"></span>
+            <h3>السودة</h3>
+            <p>قمم شاهقة وضباب</p>
+          </div>
+        </a>
+        <a class="pk-dest-card" href="tanomah.html">
+          <img class="scenic" src="assets/img/peaks/tanomah.jpg" alt="مرتفعات تنومة">
+          <span class="pk-dest-mark" aria-hidden="true">△</span>
+          <div class="pk-dest-info">
+            <span class="pk-dest-accent" aria-hidden="true"></span>
+            <h3>تنومة</h3>
+            <p>غابات وممرات هادئة</p>
+          </div>
+        </a>
+        <a class="pk-dest-card" href="al-namas.html">
+          <img class="scenic" src="assets/img/peaks/alnamas.jpg" alt="مرتفعات النماص">
+          <span class="pk-dest-mark" aria-hidden="true">△</span>
+          <div class="pk-dest-info">
+            <span class="pk-dest-accent" aria-hidden="true"></span>
+            <h3>النماص</h3>
+            <p>مرتفعات وقرى هادئة</p>
+          </div>
+        </a>
+        <a class="pk-dest-card" href="ballasmar.html">
+          <img class="scenic" src="assets/img/peaks/balasmer.jpg" alt="غابات بللسمر">
+          <span class="pk-dest-mark" aria-hidden="true">△</span>
+          <div class="pk-dest-info">
+            <span class="pk-dest-accent" aria-hidden="true"></span>
+            <h3>بللسمر</h3>
+            <p>غابات وضباب بارد</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pk-why">
+    <div class="container">
+      <header class="pk-block-head">
+        <h2>لماذا القمم؟</h2>
+        <p>ليست مناطق مرتفعة فقط، بل تجربة شعورية كاملة: برد، ضباب، هدوء، وإطلالات بعيدة.</p>
+      </header>
+      <div class="grid grid-4 pk-why-rail">
+        <!-- RTL: first = rightmost -->
+        <article class="pk-why-card">
+          <span class="pk-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/fact-weather.svg" width="28" height="28" alt="">
+          </span>
+          <h3>ضباب الصباح</h3>
+          <p>لحظة الهواء الأولى فوق السحاب.</p>
+          <span class="pk-why-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="pk-why-card">
+          <span class="pk-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/why-views.svg" width="28" height="28" alt="">
+          </span>
+          <h3>إطلالات شاهقة</h3>
+          <p>مشاهد واسعة بين الجبال والوديان.</p>
+          <span class="pk-why-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="pk-why-card">
+          <span class="pk-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/why-city.svg" width="28" height="28" alt="">
+          </span>
+          <h3>قرى معلّقة</h3>
+          <p>حكايات حجرية على أطراف المرتفعات.</p>
+          <span class="pk-why-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="pk-why-card">
+          <span class="pk-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/fact-altitude.svg" width="28" height="28" alt="">
+          </span>
+          <h3>مسارات باردة</h3>
+          <p>تجارب مشي ومشاهدة بطقس ألطف.</p>
+          <span class="pk-why-card__accent" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pk-exp">
+    <div class="container">
+      <header class="pk-block-head">
+        <h2>اختر تجربتك فوق السحاب</h2>
+        <p>تجارب قريبة من القمم تجمع بين المشهد الجبلي والهواء البارد والوقت الهادئ.</p>
+      </header>
+      <div class="grid grid-4 pk-exp-rail">
+        <a class="pk-exp-card" href="experiences.html">
+          <img class="scenic" src="assets/img/peaks/exp-1.jpg" alt="">
+          <h3>قرية تراثية</h3>
+          <p>اكتشف الذاكرة الجبلية</p>
+          <span class="pk-exp-arrow" aria-hidden="true">←</span>
+        </a>
+        <a class="pk-exp-card" href="experiences.html">
+          <img class="scenic" src="assets/img/peaks/exp-2.jpg" alt="">
+          <h3>قهوة جبلية</h3>
+          <p>جلسة هادئة فوق الغيم</p>
+          <span class="pk-exp-arrow" aria-hidden="true">←</span>
+        </a>
+        <a class="pk-exp-card" href="experiences.html">
+          <img class="scenic" src="assets/img/peaks/exp-3.jpg" alt="">
+          <h3>الممشى الجبلي</h3>
+          <p>مسار بإطلالة مفتوحة</p>
+          <span class="pk-exp-arrow" aria-hidden="true">←</span>
+        </a>
+        <a class="pk-exp-card" href="experiences.html">
+          <img class="scenic" src="assets/img/peaks/exp-4.jpg" alt="">
+          <h3>إطلالة جبلية</h3>
+          <p>نقطة مشاهدة فاخرة</p>
+          <span class="pk-exp-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pk-route">
+    <div class="container pk-route-inner">
+      <header class="pk-route-header">
+        <h2>مسار القمم</h2>
+        <p>مسار زيارة مقترح يربط وجهات القمم من أبها حتى بللسمر — اختر محطة لفتح صفحتها.</p>
+      </header>
+      <div class="pk-route-board">
+        <p class="pk-route-board__hint">ترتيب مقترح للزيارة · ليس خريطة جغرافية</p>
+        <!-- RTL: first = rightmost = stop 1 -->
+        <ol class="pk-route-path pk-route-path--5" aria-label="محطات مسار القمم">
+          <li>
+            <a class="pk-route-stop" href="abha.html">
+              <span class="pk-route-stop__num">1</span>
+              <span class="pk-route-stop__name">أبها</span>
+              <span class="pk-route-stop__note">مدينة بين الجبال</span>
+            </a>
+          </li>
+          <li>
+            <a class="pk-route-stop" href="soudah.html">
+              <span class="pk-route-stop__num">2</span>
+              <span class="pk-route-stop__name">السودة</span>
+              <span class="pk-route-stop__note">قمم شاهقة وضباب</span>
+            </a>
+          </li>
+          <li>
+            <a class="pk-route-stop" href="tanomah.html">
+              <span class="pk-route-stop__num">3</span>
+              <span class="pk-route-stop__name">تنومة</span>
+              <span class="pk-route-stop__note">غابات وممرات هادئة</span>
+            </a>
+          </li>
+          <li>
+            <a class="pk-route-stop" href="al-namas.html">
+              <span class="pk-route-stop__num">4</span>
+              <span class="pk-route-stop__name">النماص</span>
+              <span class="pk-route-stop__note">مرتفعات وقرى هادئة</span>
+            </a>
+          </li>
+          <li>
+            <a class="pk-route-stop" href="ballasmar.html">
+              <span class="pk-route-stop__num">5</span>
+              <span class="pk-route-stop__name">بللسمر</span>
+              <span class="pk-route-stop__note">غابات وضباب بارد</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="exp-cta">
+      <div class="exp-cta-bg"><img src="assets/img/peaks/hero.jpg" alt="" aria-hidden="true"></div>
+      <div class="exp-cta-content">
+        <h2>خطط رحلة بين القمم</h2>
+        <p>اختر أيامك واهتماماتك، ودع عسير تقترح لك مسارًا يبدأ من السحاب.</p>
+        <a href="plan.html" class="exp-cta-btn">ابدأ التخطيط</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=44"></script>
 </body>
 </html>

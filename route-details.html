@@ -3,12 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل المسار | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <title>مسار قمم السودة | عسير</title>
+  <link rel="stylesheet" href="style.css?v=187">
 </head>
-<body data-page="plan" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/planner-route.png')"><div class="copy"><p class="crumb">الرئيسية / تفاصيل المسار</p><h1>يوم فوق الغيم</h1><p>أبها ← السودة</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p>أبها ← السودة</p><p><a class="btn btn-gold" href="checkout.html">اعتمد هذه الرحلة</a></p></div></div></section>
-<script src="script.js"></script>
+<body data-page="plan" data-header="transparent">
+
+  <!-- Hero — same chrome as restaurant-details (Figma 845 content) -->
+  <section class="rt-hero" aria-label="معرض المسار">
+    <div class="rt-hero__stage">
+      <img class="rt-hero__photo" data-rt-main src="assets/img/routes/hero.jpg" alt="مسار قمم السودة">
+      <div class="rt-hero__overlay" aria-hidden="true"></div>
+      <div class="rt-hero__copy">
+        <p class="crumb">المسارات / مسارات جبلية</p>
+        <h1>مسار قمم السودة</h1>
+        <p class="rt-hero__sub">رحلة ساحرة على أعلى قمم عسير، حيث الجمال الطبيعي لا ينتهي والهواء النقي ينعشك خطوة بخطوة.</p>
+        <div class="rt-hero__stats">
+          <div class="rt-hero__stat">
+            <strong>2,980 م</strong>
+            <span>الارتفاع</span>
+          </div>
+          <div class="rt-hero__stat">
+            <strong>12.4 كم</strong>
+            <span>المسافة</span>
+          </div>
+          <div class="rt-hero__stat">
+            <strong>متوسط</strong>
+            <span>مستوى الصعوبة</span>
+          </div>
+          <div class="rt-hero__stat">
+            <strong>5–6 ساعات</strong>
+            <span>مدة المسار</span>
+          </div>
+        </div>
+        <div class="rt-hero__actions">
+          <button class="rt-hero__btn rt-hero__btn--gold" type="button">
+            <img src="assets/icons/route/heart.svg" alt="" width="18" height="16">
+            <span>احفظ المسار</span>
+          </button>
+        </div>
+      </div>
+      <a class="rt-hero__all" href="#rt-thumbs">عرض جميع الصور</a>
+      <div class="rt-hero__controls">
+        <button class="rt-hero__nav" type="button" data-rt-prev aria-label="الصورة السابقة">‹</button>
+        <span class="rt-hero__count" data-rt-count dir="ltr">01 / 06</span>
+        <button class="rt-hero__nav" type="button" data-rt-next aria-label="الصورة التالية">›</button>
+      </div>
+    </div>
+    <div class="rt-hero__thumbs" id="rt-thumbs" role="tablist" aria-label="صور مصغّرة">
+      <button class="rt-hero__thumb is-active" type="button" role="tab" aria-selected="true" data-rt-thumb="0">
+        <img src="assets/img/routes/hero.jpg" alt="إطلالة مسار قمم السودة عند الغروب">
+      </button>
+      <button class="rt-hero__thumb" type="button" role="tab" aria-selected="false" data-rt-thumb="1">
+        <img src="assets/img/routes/station-1.jpg" alt="نقطة بداية مسار قمم السودة">
+      </button>
+      <button class="rt-hero__thumb" type="button" role="tab" aria-selected="false" data-rt-thumb="2">
+        <img src="assets/img/routes/station-2.jpg" alt="قرية أعلى السودة على المسار">
+      </button>
+      <button class="rt-hero__thumb" type="button" role="tab" aria-selected="false" data-rt-thumb="3">
+        <img src="assets/img/routes/station-3.jpg" alt="ممر الضباب في مسار السودة">
+      </button>
+      <button class="rt-hero__thumb" type="button" role="tab" aria-selected="false" data-rt-thumb="4">
+        <img src="assets/img/routes/station-4.jpg" alt="قمة المجرة على مسار السودة">
+      </button>
+      <button class="rt-hero__thumb" type="button" role="tab" aria-selected="false" data-rt-thumb="5">
+        <img src="assets/img/routes/station-5.jpg" alt="قمة السودة نهاية المسار">
+      </button>
+    </div>
+  </section>
+
+  <!-- Map — white after hero -->
+  <section class="rt-map" id="rt-map">
+    <div class="container">
+      <div class="rt-map__card">
+        <div class="rt-map__side">
+          <h2 class="rt-map__title">خريطة المسار</h2>
+          <ol class="rt-stops" data-rt-stops>
+            <li>
+              <button class="rt-stop is-active" type="button" data-rt-stop="0" aria-pressed="true">
+                <span class="rt-stops__num">01</span>
+                <span class="rt-stops__meta">
+                  <span class="rt-stops__name">نقطة البداية</span>
+                  <span class="rt-stops__hint">انطلاق المسار · مرافق وسلامة</span>
+                </span>
+                <span class="rt-stops__alt">2,150 م</span>
+              </button>
+            </li>
+            <li>
+              <button class="rt-stop" type="button" data-rt-stop="1" aria-pressed="false">
+                <span class="rt-stops__num">02</span>
+                <span class="rt-stops__meta">
+                  <span class="rt-stops__name">قرية أعلى السودة</span>
+                  <span class="rt-stops__hint">قرية تراثية · استراحة</span>
+                </span>
+                <span class="rt-stops__alt">2,300 م</span>
+              </button>
+            </li>
+            <li>
+              <button class="rt-stop" type="button" data-rt-stop="2" aria-pressed="false">
+                <span class="rt-stops__num">03</span>
+                <span class="rt-stops__meta">
+                  <span class="rt-stops__name">ممر الضباب</span>
+                  <span class="rt-stops__hint">ضباب كثيف · تصوير</span>
+                </span>
+                <span class="rt-stops__alt">2,600 م</span>
+              </button>
+            </li>
+            <li>
+              <button class="rt-stop" type="button" data-rt-stop="3" aria-pressed="false">
+                <span class="rt-stops__num">04</span>
+                <span class="rt-stops__meta">
+                  <span class="rt-stops__name">قمة المجرة</span>
+                  <span class="rt-stops__hint">منصة إطلالة واسعة</span>
+                </span>
+                <span class="rt-stops__alt">2,850 م</span>
+              </button>
+            </li>
+            <li>
+              <button class="rt-stop" type="button" data-rt-stop="4" aria-pressed="false">
+                <span class="rt-stops__num">05</span>
+                <span class="rt-stops__meta">
+                  <span class="rt-stops__name">قمة السودة</span>
+                  <span class="rt-stops__hint">أعلى نقطة · بانوراما</span>
+                </span>
+                <span class="rt-stops__alt">2,980 م</span>
+              </button>
+            </li>
+          </ol>
+        </div>
+
+        <div class="rt-map__stage">
+          <div class="rt-map__visual" data-rt-map>
+            <svg class="rt-map__svg" viewBox="0 0 760 422" width="760" height="422" role="img" aria-label="مسار قمم السودة على الخريطة" data-rt-svg>
+              <defs>
+                <linearGradient id="rtTrailFill" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#003B2B"/>
+                  <stop offset="100%" stop-color="#0A5A45"/>
+                </linearGradient>
+                <filter id="rtPinGlow" x="-60%" y="-60%" width="220%" height="220%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#C89A38" flood-opacity=".55"/>
+                </filter>
+              </defs>
+              <!-- Contours -->
+              <g class="rt-map__contours" fill="none" stroke="#003B2B" stroke-opacity=".08" stroke-width="1.2">
+                <path d="M-40 90 C120 40, 280 150, 440 90 S700 20, 820 80"/>
+                <path d="M-20 130 C140 80, 300 190, 460 130 S720 60, 840 120"/>
+                <path d="M0 170 C160 120, 320 230, 480 170 S740 100, 860 160"/>
+                <path d="M20 210 C180 160, 340 270, 500 210 S760 140, 880 200"/>
+                <path d="M40 250 C200 200, 360 310, 520 250 S780 180, 900 240"/>
+                <path d="M60 290 C220 240, 380 350, 540 290 S800 220, 920 280"/>
+                <path d="M90 330 C250 280, 410 390, 570 330 S830 260, 940 320"/>
+                <path d="M120 370 C280 320, 440 420, 600 370 S860 300, 960 360"/>
+              </g>
+              <!-- Trail underlay + dashed core -->
+              <path class="rt-map__trail-bg" d="M120 340 C180 310, 210 280, 244 260 S310 210, 366 178 S430 130, 486 100 S560 60, 635 38" fill="none" stroke="url(#rtTrailFill)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="rt-map__trail" d="M120 340 C180 310, 210 280, 244 260 S310 210, 366 178 S430 130, 486 100 S560 60, 635 38" fill="none" stroke="#EFF4EC" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="10 9" stroke-linejoin="round"/>
+              <!-- Pins -->
+              <g class="rt-map__pins">
+                <g class="rt-map__pin is-active" data-rt-pin="0" transform="translate(120 340)" role="button" tabindex="0" aria-label="نقطة البداية">
+                  <circle class="rt-map__pin-halo" r="22" fill="#C89A38" fill-opacity=".22"/>
+                  <circle r="14" fill="#003B2B" stroke="#EFF4EC" stroke-width="2"/>
+                  <path d="M-3 -1 h4 v-7 h3 l-5 -5 -5 5 h3 z" fill="#EFF4EC"/>
+                </g>
+                <g class="rt-map__pin" data-rt-pin="1" transform="translate(244 260)" role="button" tabindex="0" aria-label="قرية أعلى السودة">
+                  <circle class="rt-map__pin-halo" r="22" fill="#C89A38" fill-opacity="0"/>
+                  <circle r="14" fill="#C89A38" stroke="#FFFFFF" stroke-width="2"/>
+                  <text y="5" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">2</text>
+                </g>
+                <g class="rt-map__pin" data-rt-pin="2" transform="translate(366 178)" role="button" tabindex="0" aria-label="ممر الضباب">
+                  <circle class="rt-map__pin-halo" r="22" fill="#C89A38" fill-opacity="0"/>
+                  <circle r="14" fill="#C89A38" stroke="#FFFFFF" stroke-width="2"/>
+                  <text y="5" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">3</text>
+                </g>
+                <g class="rt-map__pin" data-rt-pin="3" transform="translate(486 100)" role="button" tabindex="0" aria-label="قمة المجرة">
+                  <circle class="rt-map__pin-halo" r="22" fill="#C89A38" fill-opacity="0"/>
+                  <circle r="14" fill="#C89A38" stroke="#FFFFFF" stroke-width="2"/>
+                  <text y="5" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">4</text>
+                </g>
+                <g class="rt-map__pin" data-rt-pin="4" transform="translate(635 38)" role="button" tabindex="0" aria-label="قمة السودة">
+                  <circle class="rt-map__pin-halo" r="22" fill="#C89A38" fill-opacity="0"/>
+                  <circle r="14" fill="#003B2B" stroke="#EFF4EC" stroke-width="2"/>
+                  <path d="M-3 -1 h4 v-7 h3 l-5 -5 -5 5 h3 z" fill="#EFF4EC"/>
+                </g>
+              </g>
+            </svg>
+
+            <div class="rt-map__compass" aria-hidden="true">
+              <span>N</span>
+              <i></i>
+            </div>
+            <div class="rt-map__zoom">
+              <button type="button" data-rt-zoom="in" aria-label="تكبير">+</button>
+              <button type="button" data-rt-zoom="out" aria-label="تصغير">−</button>
+            </div>
+          </div>
+
+          <aside class="rt-map__preview" data-rt-preview>
+            <img data-rt-preview-img src="assets/img/routes/station-1.jpg" alt="">
+            <div class="rt-map__preview-copy">
+              <p class="rt-map__preview-kicker" data-rt-preview-num>المحطة 01</p>
+              <strong data-rt-preview-name>نقطة البداية</strong>
+              <span data-rt-preview-alt>2,150 م</span>
+            </div>
+            <a class="rt-map__preview-link" href="#rt-stations">تفاصيل المحطة ←</a>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stations — sage -->
+  <section class="rt-stations" id="rt-stations">
+    <div class="container">
+      <h2 class="rt-sec-title">تفاصيل المحطات</h2>
+      <div class="rt-station-grid" data-rt-stations>
+        <article class="rt-station is-active" data-rt-station="0" tabindex="0">
+          <img src="assets/img/routes/station-1.jpg" alt="نقطة بداية مسار قمم السودة">
+          <span class="rt-station__badge">01</span>
+          <div class="rt-station__copy">
+            <h3>نقطة البداية</h3>
+            <p>منطقة انتظار ومعلومات عن المسار وتعليمات السلامة.</p>
+            <span>2,150 م △</span>
+          </div>
+        </article>
+        <article class="rt-station" data-rt-station="1" tabindex="0">
+          <img src="assets/img/routes/station-2.jpg" alt="قرية أعلى السودة">
+          <span class="rt-station__badge">02</span>
+          <div class="rt-station__copy">
+            <h3>قرية أعلى السودة</h3>
+            <p>قرية تراثية جميلة بإطلالة خلابة، استراحة ومرافق أساسية.</p>
+            <span>2,300 م △</span>
+          </div>
+        </article>
+        <article class="rt-station" data-rt-station="2" tabindex="0">
+          <img src="assets/img/routes/station-3.jpg" alt="ممر الضباب">
+          <span class="rt-station__badge">03</span>
+          <div class="rt-station__copy">
+            <h3>ممر الضباب</h3>
+            <p>منطقة ضبابية ساحرة تمنحك تجربة فريدة للتصوير والاستمتاع.</p>
+            <span>2,600 م △</span>
+          </div>
+        </article>
+        <article class="rt-station" data-rt-station="3" tabindex="0">
+          <img src="assets/img/routes/station-4.jpg" alt="قمة المجرة">
+          <span class="rt-station__badge">04</span>
+          <div class="rt-station__copy">
+            <h3>قمة المجرة</h3>
+            <p>منصة طبيعية بإطلالة واسعة على الجبال المحيطة.</p>
+            <span>2,850 م △</span>
+          </div>
+        </article>
+        <article class="rt-station" data-rt-station="4" tabindex="0">
+          <img src="assets/img/routes/station-5.jpg" alt="قمة السودة">
+          <span class="rt-station__badge">05</span>
+          <div class="rt-station__copy">
+            <h3>قمة السودة</h3>
+            <p>أعلى نقطة في عسير، إطلالة بانورامية لا تُنسى.</p>
+            <span>2,980 م △</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guidance — white -->
+  <section class="rt-guide">
+    <div class="container rt-guide__grid">
+      <aside class="rt-guide__card">
+        <h2>ماذا تحتاج قبل الانطلاق؟</h2>
+        <ul class="rt-guide__checks">
+          <li>حذاء مريح للمشي</li>
+          <li>ملابس مناسبة للبرودة</li>
+          <li>ماء كافٍ وطعام خفيف</li>
+          <li>واقي شمس ونظارة شمسية</li>
+          <li>كاميرا أو جوال للتصوير</li>
+          <li>حقيبة ظهر صغيرة</li>
+        </ul>
+      </aside>
+      <aside class="rt-guide__card">
+        <h2>أفضل وقت للزيارة</h2>
+        <div class="rt-guide__chips">
+          <span>مارس – مايو</span>
+          <span>سبتمبر – نوفمبر</span>
+        </div>
+        <p>حيث يكون الطقس معتدلًا والطبيعة في أجمل حالاتها.</p>
+      </aside>
+      <aside class="rt-guide__card rt-guide__card--dark">
+        <h2>إرشادات مهمة</h2>
+        <ul>
+          <li><span class="rt-guide__icon" aria-hidden="true">ⓘ</span>التزم بالمسار المحدد</li>
+          <li><span class="rt-guide__icon" aria-hidden="true">♻</span>لا تترك مخلفات</li>
+          <li><span class="rt-guide__icon" aria-hidden="true">⚘</span>احترم الطبيعة والحياة الفطرية</li>
+          <li><span class="rt-guide__icon" aria-hidden="true">☼</span>تأكد من حالة الطقس قبل الانطلاق</li>
+          <li><span class="rt-guide__icon" aria-hidden="true">⌖</span>أخبر أحدًا عن خط سيرك</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Similar — sage -->
+  <section class="rt-similar">
+    <div class="container">
+      <div class="rt-sec-head">
+        <h2 class="rt-sec-title">مسارات مشابهة</h2>
+        <a class="section-link" href="experiences.html#exp-routes">عرض جميع المسارات ←</a>
+      </div>
+      <div class="rt-similar-grid">
+        <a class="rt-similar-card" href="route-details.html">
+          <img src="assets/img/routes/similar-1.jpg" alt="مسار وادي رجال ألمع">
+          <div class="rt-similar-card__copy">
+            <h3>مسار وادي رجال ألمع</h3>
+            <p><span>4 ساعات</span><span>8.7 كم</span><span>المخاطرة بسيطة</span></p>
+          </div>
+        </a>
+        <a class="rt-similar-card" href="route-details.html">
+          <img src="assets/img/routes/similar-2.jpg" alt="مسار قرية الحبلة">
+          <div class="rt-similar-card__copy">
+            <h3>مسار قرية الحبلة</h3>
+            <p><span>5 ساعات</span><span>10.3 كم</span><span>المخاطرة متوسطة</span></p>
+          </div>
+        </a>
+        <a class="rt-similar-card" href="route-details.html">
+          <img src="assets/img/routes/station-4.jpg" alt="مسار جبل ذرة">
+          <div class="rt-similar-card__copy">
+            <h3>مسار جبل ذرة</h3>
+            <p><span>5–6 ساعات</span><span>14.1 كم</span><span>المخاطرة عالية</span></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=59"></script>
 </body>
 </html>

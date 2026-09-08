@@ -4,11 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>إتمام الحجز والدفع | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=169">
 </head>
 <body data-page="stays" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/contact-hero.png')"><div class="copy"><p class="crumb">الرئيسية / إتمام الحجز والدفع</p><h1>إتمام الحجز والدفع</h1><p>راجع بيانات حجزك في عسير</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p>راجع بيانات حجزك في عسير</p><p><a class="btn btn-gold" href="confirmation.html">تأكيد الدفع</a></p></div></div></section>
-<script src="script.js"></script>
+
+  <!-- Page header band — Figma 1142:2, 1440×170 (solid, not photo hero) -->
+  <section class="co-hero" aria-label="إتمام الحجز والدفع">
+    <div class="container co-hero__inner">
+      <p class="co-hero__crumb">الرئيسية  ›  الإقامة  ›  تفاصيل الإقامة  ›  إتمام الحجز</p>
+      <h1>إتمام الحجز والدفع</h1>
+    </div>
+  </section>
+
+  <section class="co-page">
+    <div class="container co-layout">
+      <!-- Summary first in DOM = rightmost in RTL (Figma left:920) -->
+      <aside class="co-summary" aria-label="ملخص حجزك">
+        <h2>ملخص حجزك</h2>
+        <p class="co-summary__name">شاليهات قمم السودة</p>
+        <p class="co-summary__place">السودة، أبها</p>
+        <hr class="co-summary__rule">
+        <dl class="co-summary__rows">
+          <div><dt>تاريخ الوصول</dt><dd>12 أكتوبر 2026</dd></div>
+          <div><dt>تاريخ المغادرة</dt><dd>15 أكتوبر 2026</dd></div>
+          <div><dt>الضيوف</dt><dd>2 بالغين</dd></div>
+        </dl>
+        <hr class="co-summary__rule">
+        <dl class="co-summary__rows">
+          <div><dt>السعر الأساسي (3 ليالٍ)</dt><dd>2,550 ر.س</dd></div>
+          <div><dt>رسوم الخدمة</dt><dd>120 ر.س</dd></div>
+          <div><dt>ضريبة القيمة المضافة (15%)</dt><dd>400 ر.س</dd></div>
+        </dl>
+        <hr class="co-summary__rule">
+        <div class="co-summary__total">
+          <span>الإجمالي</span>
+          <strong>3,070 ر.س</strong>
+        </div>
+        <button class="btn btn-gold co-summary__cta" type="submit" form="co-form">تأكيد الحجز والدفع</button>
+        <p class="co-summary__note">دفع آمن ومشفّر بالكامل</p>
+      </aside>
+
+      <form class="co-form" id="co-form" action="confirmation.html" method="get">
+        <h2>بيانات الضيف</h2>
+
+        <label class="co-field">
+          <span>الاسم الكامل</span>
+          <input type="text" name="name" value="أحمد محمد العسيري" required autocomplete="name">
+        </label>
+        <label class="co-field">
+          <span>البريد الإلكتروني</span>
+          <input type="email" name="email" value="ahmed.alasiri@email.com" required autocomplete="email">
+        </label>
+        <label class="co-field">
+          <span>رقم الجوال</span>
+          <input type="tel" name="phone" value="+966 55 123 4567" required autocomplete="tel">
+        </label>
+
+        <hr class="co-form__rule">
+
+        <h2>طريقة الدفع</h2>
+        <div class="co-pay" role="radiogroup" aria-label="طريقة الدفع" data-co-pay>
+          <button class="co-pay__opt is-on" type="button" role="radio" aria-checked="true" data-pay="card">بطاقة ائتمانية</button>
+          <button class="co-pay__opt" type="button" role="radio" aria-checked="false" data-pay="apple">Apple Pay</button>
+          <button class="co-pay__opt" type="button" role="radio" aria-checked="false" data-pay="bank">تحويل بنكي</button>
+        </div>
+        <input type="hidden" name="pay" value="card" data-co-pay-value>
+
+        <div class="co-card-fields" data-co-card-fields>
+          <label class="co-field">
+            <span>رقم البطاقة</span>
+            <input type="text" name="card" value="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number">
+          </label>
+          <div class="co-field-row">
+            <label class="co-field">
+              <span>رمز الأمان (CVV)</span>
+              <input type="password" name="cvv" value="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc" placeholder="•••">
+            </label>
+            <label class="co-field">
+              <span>تاريخ الانتهاء</span>
+              <input type="text" name="exp" value="12/28" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY">
+            </label>
+          </div>
+          <label class="co-field">
+            <span>الاسم كما يظهر على البطاقة</span>
+            <input type="text" name="cardname" value="Ahmed M. Alasiri" autocomplete="cc-name">
+          </label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js?v=49"></script>
 </body>
 </html>

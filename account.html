@@ -4,10 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>حسابي | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=205">
 </head>
-<body data-page="home" data-header="solid">
-<section class="section" style="padding-top:160px"><div class="container"><p class="crumb">الرئيسية › حسابي</p><h1>حسابي</h1><div class="panel" style="margin-top:24px"><h2>أحمد محمد العسيري</h2><p class="muted">ahmed.alasiri@email.com</p><div class="card-grid" style="margin-top:24px"><a class="card" href="confirmation.html"><div class="body"><h3>حجوزاتي</h3></div></a><a class="card" href="plan.html"><div class="body"><h3>رحلاتي</h3></div></a><a class="card" href="contact.html"><div class="body"><h3>الدعم</h3></div></a></div></div></div></section>
-<script src="script.js"></script>
+<body data-page="account" data-header="solid">
+
+  <section class="ac-hero" aria-label="حسابي">
+    <div class="container ac-hero__inner">
+      <p class="ac-hero__crumb">الرئيسية › حسابي</p>
+      <h1>حسابي</h1>
+    </div>
+  </section>
+
+  <section class="ac-body">
+    <div class="container ac-layout">
+      <aside class="ac-side" aria-label="قائمة الحساب">
+        <div class="ac-side__profile">
+          <div class="ac-avatar" aria-hidden="true">م</div>
+          <h2>مازن المالكي</h2>
+          <p dir="ltr">mazen.almalki@email.com</p>
+        </div>
+        <nav class="ac-side__nav" data-ac-nav>
+          <button type="button" class="ac-nav-item" data-ac-panel="overview">نظرة عامة</button>
+          <button type="button" class="ac-nav-item is-active" data-ac-panel="bookings" aria-current="page">حجوزاتي</button>
+          <button type="button" class="ac-nav-item" data-ac-panel="favorites">المفضلة</button>
+          <button type="button" class="ac-nav-item" data-ac-panel="settings">الإعدادات</button>
+        </nav>
+        <a class="ac-logout" href="login.html">تسجيل الخروج</a>
+      </aside>
+
+      <div class="ac-main">
+        <!-- Bookings -->
+        <div class="ac-panel is-active" data-ac-view="bookings" id="account-bookings">
+          <h2 class="ac-panel__title">حجوزاتي</h2>
+
+          <div class="ac-tabs" role="tablist" aria-label="تصفية الحجوزات" data-ac-tabs>
+            <!-- RTL: rightmost first -->
+            <button type="button" class="ac-tab is-active" role="tab" aria-selected="true" data-ac-filter="upcoming">القادمة</button>
+            <button type="button" class="ac-tab" role="tab" aria-selected="false" data-ac-filter="past">السابقة</button>
+            <button type="button" class="ac-tab" role="tab" aria-selected="false" data-ac-filter="cancelled">الملغاة</button>
+          </div>
+
+          <div class="ac-bookings" data-ac-list>
+            <article class="ac-book" data-ac-status="upcoming">
+              <a class="ac-book__thumb" href="stay-details.html"><img src="assets/img/account/book-1.jpg" alt="" width="88" height="88"></a>
+              <div class="ac-book__body">
+                <span class="ac-book__badge ac-book__badge--upcoming">قادم</span>
+                <h3>شاليهات قمم السودة</h3>
+                <p>12 - 15 أكتوبر 2026 · 2 بالغين</p>
+              </div>
+              <div class="ac-book__meta">
+                <strong>3,070 ر.س</strong>
+                <a href="confirmation.html">عرض التفاصيل ←</a>
+              </div>
+            </article>
+
+            <article class="ac-book" data-ac-status="past" hidden>
+              <a class="ac-book__thumb" href="experience-details.html"><img src="assets/img/account/book-2.jpg" alt="" width="88" height="88"></a>
+              <div class="ac-book__body">
+                <span class="ac-book__badge ac-book__badge--done">مكتمل</span>
+                <h3>جولة شروق الشمس</h3>
+                <p>2 سبتمبر 2026 · شخص واحد</p>
+              </div>
+              <div class="ac-book__meta">
+                <strong>180 ر.س</strong>
+                <a href="experience-details.html">عرض التفاصيل ←</a>
+              </div>
+            </article>
+
+            <article class="ac-book" data-ac-status="cancelled" hidden>
+              <a class="ac-book__thumb" href="event-details.html"><img src="assets/img/account/book-3.jpg" alt="" width="88" height="88"></a>
+              <div class="ac-book__body">
+                <span class="ac-book__badge ac-book__badge--cancelled">ملغى</span>
+                <h3>أمسية مشاهدة النجوم</h3>
+                <p>18 يوليو 2026 · 2 أشخاص</p>
+              </div>
+              <div class="ac-book__meta">
+                <strong>240 ر.س</strong>
+                <a href="event-details.html">عرض التفاصيل ←</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="ac-empty" data-ac-empty hidden>
+            <div class="ac-empty__icon" aria-hidden="true">▤</div>
+            <h3>لا توجد حجوزات بعد</h3>
+            <p>ابدأ استكشاف عسير واحجز تجربتك الأولى بين القمم والضباب</p>
+            <a class="ac-empty__btn" href="experiences.html">استكشف التجارب</a>
+          </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="ac-panel" data-ac-view="overview" hidden>
+          <h2 class="ac-panel__title">نظرة عامة</h2>
+          <div class="ac-overview">
+            <a class="ac-overview__card" href="#account-bookings" data-ac-goto="bookings">
+              <h3>حجوزاتي</h3>
+              <p>1 قادمة</p>
+            </a>
+            <a class="ac-overview__card" href="plan.html">
+              <h3>رحلاتي</h3>
+              <p>خطط رحلة جديدة</p>
+            </a>
+            <a class="ac-overview__card" href="contact.html">
+              <h3>الدعم</h3>
+              <p>تواصل معنا</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Favorites -->
+        <div class="ac-panel" data-ac-view="favorites" hidden>
+          <h2 class="ac-panel__title">المفضلة</h2>
+          <div class="ac-empty">
+            <div class="ac-empty__icon" aria-hidden="true">♥</div>
+            <h3>لا توجد مفضلات بعد</h3>
+            <p>احفظ التجارب والأماكن التي تعجبك لتجدها هنا لاحقًا</p>
+            <a class="ac-empty__btn" href="experiences.html">استكشف التجارب</a>
+          </div>
+        </div>
+
+        <!-- Settings -->
+        <div class="ac-panel" data-ac-view="settings" hidden>
+          <h2 class="ac-panel__title">الإعدادات</h2>
+          <div class="ac-settings">
+            <div class="ac-settings__row">
+              <span>الاسم</span>
+              <strong>مازن المالكي</strong>
+            </div>
+            <div class="ac-settings__row">
+              <span>البريد</span>
+              <strong dir="ltr">mazen.almalki@email.com</strong>
+            </div>
+            <div class="ac-settings__row">
+              <span>اللغة</span>
+              <strong>العربية</strong>
+            </div>
+            <p class="ac-settings__note">تحديث البيانات الشخصية قريبًا.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=64"></script>
 </body>
 </html>

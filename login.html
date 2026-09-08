@@ -4,10 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تسجيل الدخول | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=202">
 </head>
-<body data-page="home" data-header="solid" data-no-footer="1">
-<section class="auth-wrap"><div class="auth-card"><a href="index.html">العودة للرئيسية ←</a><h1>تسجيل الدخول</h1><p class="muted">سجّل دخولك لإدارة حجوزاتك في عسير</p><form class="form-grid" data-auth-form><input type="email" placeholder="البريد الإلكتروني"><input type="password" placeholder="كلمة المرور"><button class="btn btn-gold dark-text" type="submit">تسجيل الدخول</button></form><p style="margin-top:18px">ليس لديك حساب؟ <a href="signup.html">إنشاء حساب</a></p></div></section>
-<script src="script.js"></script>
+<body data-page="login" data-no-header="1" data-no-footer="1">
+
+  <main class="lg-page" id="main">
+    <div class="lg-bg" aria-hidden="true">
+      <img src="assets/img/login/bg.jpg" alt="">
+    </div>
+
+    <a class="lg-back" href="index.html">العودة للرئيسية ←</a>
+
+    <a class="lg-logo" href="index.html" aria-label="عسير">
+      <img class="lg-logo__mark" src="assets/img/logo-mark.png" width="43" height="43" alt="">
+      <span class="lg-logo__word">
+        <span class="lg-logo__ar">عسير</span>
+        <span class="lg-logo__en">A S E E R</span>
+      </span>
+    </a>
+
+    <section class="lg-card" aria-labelledby="lg-title">
+      <h1 id="lg-title">تسجيل الدخول</h1>
+      <p class="lg-card__sub">سجّل دخولك لإدارة حجوزاتك في عسير</p>
+
+      <form class="lg-form" data-auth-form>
+        <label class="lg-field">
+          <span>البريد الإلكتروني</span>
+          <input type="email" name="email" required autocomplete="email" value="ahmed.alasiri@email.com" dir="ltr">
+        </label>
+
+        <label class="lg-field">
+          <span>كلمة المرور</span>
+          <input type="password" name="password" required autocomplete="current-password" value="password123" dir="ltr">
+        </label>
+
+        <a class="lg-forgot" href="#forgot">نسيت كلمة المرور؟</a>
+
+        <button class="lg-btn lg-btn--gold" type="submit">تسجيل الدخول</button>
+      </form>
+
+      <div class="lg-or" role="separator" aria-label="أو">
+        <span>أو</span>
+      </div>
+
+      <button class="lg-btn lg-btn--ghost" type="button">المتابعة عبر جوجل</button>
+
+      <p class="lg-foot">
+        ليس لديك حساب؟
+        <a href="signup.html">إنشاء حساب</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js?v=63"></script>
 </body>
 </html>

@@ -3,12 +3,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل الإقامة | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <title>شاليهات قمم السودة | عسير</title>
+  <link rel="stylesheet" href="style.css?v=168">
 </head>
 <body data-page="stays" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/region-peaks.png')"><div class="copy"><p class="crumb">الرئيسية / تفاصيل الإقامة</p><h1>شاليهات قمم السودة</h1><p>السودة · ★ 4.8 · 850 ريال / ليلة</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p>السودة · ★ 4.8 · 850 ريال / ليلة</p><p><a class="btn btn-gold" href="checkout.html">إتمام الحجز</a></p></div></div></section>
-<script src="script.js"></script>
+
+  <!-- Gallery — Figma 804:28, 1296×460 on --grad band (nav injected separately) -->
+  <section class="sd-gallery" aria-label="معرض الصور">
+    <div class="container sd-gallery__inner">
+      <div class="sd-gallery__thumbs" role="tablist" aria-label="صور مصغّرة">
+        <button class="sd-gallery__thumb is-active" type="button" role="tab" aria-selected="true" data-sd-thumb="0">
+          <img src="assets/img/stays/details/gallery-1.png" alt="">
+        </button>
+        <button class="sd-gallery__thumb" type="button" role="tab" aria-selected="false" data-sd-thumb="1">
+          <img src="assets/img/stays/details/gallery-2.png" alt="">
+        </button>
+        <button class="sd-gallery__thumb" type="button" role="tab" aria-selected="false" data-sd-thumb="2">
+          <img src="assets/img/stays/details/gallery-3.png" alt="">
+        </button>
+        <a class="sd-gallery__all" href="#sd-similar">عرض جميع الصور</a>
+      </div>
+      <div class="sd-gallery__main">
+        <img class="sd-gallery__photo" data-sd-main src="assets/img/stays/details/gallery-main.png" alt="شاليهات قمم السودة">
+        <div class="sd-gallery__controls">
+          <button class="sd-gallery__nav" type="button" data-sd-prev aria-label="الصورة السابقة">‹</button>
+          <span class="sd-gallery__count" data-sd-count>05 / 12</span>
+          <button class="sd-gallery__nav" type="button" data-sd-next aria-label="الصورة التالية">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview + booking — Figma 804:41 -->
+  <section class="sd-overview">
+    <div class="container sd-overview__inner">
+      <div class="sd-overview__info">
+        <p class="sd-overview__crumb">الإقامة  ›  تفاصيل الإقامة</p>
+        <div class="sd-overview__title-row">
+          <h1>شاليهات قمم السودة</h1>
+          <span class="sd-overview__badge">مميز</span>
+        </div>
+        <p class="sd-overview__loc">السودة، أبها</p>
+        <p class="sd-overview__rate">4.8 ★  (256 تقييم)</p>
+        <p class="sd-overview__desc">شاليهات فاخرة في قلب السودة بإطلالات ساحرة على الجبال والضباب.<br>تجربة مريحة تجمع بين الفخامة والهدوء والطبيعة الخلابة.</p>
+        <ul class="sd-features">
+          <li>
+            <img src="assets/icons/stay/feat-1.svg" alt="" width="24" height="17">
+            <span>إطلالة على الجبال</span>
+          </li>
+          <li>
+            <img src="assets/icons/stay/feat-2.svg" alt="" width="19" height="19">
+            <span>مناسب للعائلات</span>
+          </li>
+          <li>
+            <img src="assets/icons/stay/feat-3.svg" alt="" width="18" height="18">
+            <span>هدوء وطبيعة</span>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="sd-book" aria-label="التحقق من التوفر">
+        <p class="sd-book__from">ابتداءً من</p>
+        <p class="sd-book__price"><b>850</b> <span>ر.س / ليلة</span></p>
+        <label class="sd-book__field">
+          <span class="visually-hidden">تاريخ الوصول</span>
+          <input type="text" name="checkin" value="22 يونيو" readonly>
+        </label>
+        <label class="sd-book__field">
+          <span class="visually-hidden">تاريخ المغادرة</span>
+          <input type="text" name="checkout" value="24 يونيو" readonly>
+        </label>
+        <label class="sd-book__field">
+          <span class="visually-hidden">الضيوف</span>
+          <input type="text" name="guests" value="2 بالغين" readonly>
+        </label>
+        <a class="btn btn-gold sd-book__cta" href="checkout.html">تحقق من التوفر</a>
+        <p class="sd-book__note">أفضل سعر مضمون</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Amenities — Figma 804:68; DOM right→left for RTL -->
+  <section class="sd-amenities">
+    <div class="container">
+      <div class="sd-sec-head">
+        <h2 class="section-title">المرافق والخدمات</h2>
+        <a class="section-link" href="#sd-amenities">عرض جميع المرافق ›</a>
+      </div>
+      <ul class="sd-amenity-grid" id="sd-amenities">
+        <li class="sd-amenity"><img src="assets/icons/stay/am-8.svg" alt=""><span>جلسات خارجية</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-7.svg" alt=""><span>تكييف</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-6.svg" alt=""><span>تلفزيون ذكي</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-5.svg" alt=""><span>واي فاي مجاني</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-4.svg" alt=""><span>مطبخ مجهز</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-3.svg" alt=""><span>مدفأة</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-2.svg" alt=""><span>غسالة</span></li>
+        <li class="sd-amenity"><img src="assets/icons/stay/am-1.svg" alt=""><span>مسبح</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Unit types — Figma 804:97 -->
+  <section class="sd-units">
+    <div class="container">
+      <div class="sd-sec-head">
+        <h2 class="section-title">أنواع الوحدات</h2>
+        <a class="section-link" href="#sd-units">عرض جميع الوحدات ›</a>
+      </div>
+      <div class="sd-unit-grid" id="sd-units">
+        <a class="sd-unit" href="checkout.html">
+          <img src="assets/img/stays/details/unit-3.png" alt="">
+          <div class="sd-unit__copy">
+            <h3>شاليه قمة</h3>
+            <p>غرفة نوم واحدة</p>
+            <div class="sd-unit__foot">
+              <span>غرفة نوم</span>
+              <span class="sd-unit__price">ابتداءً من 850 ر.س</span>
+            </div>
+          </div>
+        </a>
+        <a class="sd-unit" href="checkout.html">
+          <img src="assets/img/stays/details/unit-2.png" alt="">
+          <div class="sd-unit__copy">
+            <h3>شاليه السودة</h3>
+            <p>غرفتي نوم</p>
+            <div class="sd-unit__foot">
+              <span>غرف نوم</span>
+              <span class="sd-unit__price">ابتداءً من 1,250 ر.س</span>
+            </div>
+          </div>
+        </a>
+        <a class="sd-unit" href="checkout.html">
+          <img src="assets/img/stays/details/unit-1.png" alt="">
+          <div class="sd-unit__copy">
+            <h3>شاليه العائلة</h3>
+            <p>3 ضيوف</p>
+            <div class="sd-unit__foot">
+              <span>غرف نوم</span>
+              <span class="sd-unit__price">ابتداءً من 950 ر.س</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location — photo of place + Google Maps link (not a fake geo map) -->
+  <section class="sd-location">
+    <div class="container">
+      <div class="sd-location__card">
+        <div class="sd-location__info">
+          <h2 class="section-title">الموقع</h2>
+          <p class="sd-location__place">السودة، أبها</p>
+          <p class="sd-location__desc">موقع مميز في أعلى السودة بالقرب من أهم المعالم والأنشطة السياحية.</p>
+          <a class="btn btn-gold sd-location__btn" href="https://maps.google.com/?q=Al+Soudah+Abha" target="_blank" rel="noopener">الاتجاهات</a>
+        </div>
+        <a class="sd-location__photo" href="https://maps.google.com/?q=Al+Soudah+Abha" target="_blank" rel="noopener" aria-label="فتح موقع السودة على الخرائط">
+          <img src="assets/img/stays/details/gallery-main.png" alt="منظر من السودة، أبها">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies — Figma 804:149; DOM right→left -->
+  <section class="sd-policies">
+    <div class="container">
+      <h2 class="section-title">معلومات وسياسة الحجز</h2>
+      <ul class="sd-policy-grid">
+        <li class="sd-policy">
+          <img src="assets/icons/stay/pol-5.svg" alt="">
+          <h3>تسجيل الوصول</h3>
+          <p>من 3:00 مساءً</p>
+        </li>
+        <li class="sd-policy">
+          <img src="assets/icons/stay/pol-4.svg" alt="">
+          <h3>تسجيل المغادرة</h3>
+          <p>حتى 12:00 مساءً</p>
+        </li>
+        <li class="sd-policy">
+          <img src="assets/icons/stay/pol-3.svg" alt="">
+          <h3>سياسة الإلغاء</h3>
+          <p>إلغاء مجاني خلال 48 ساعة من تاريخ الوصول</p>
+        </li>
+        <li class="sd-policy">
+          <img src="assets/icons/stay/pol-2.svg" alt="">
+          <h3>الأطفال</h3>
+          <p>يرحب بالأطفال بجميع الأعمار</p>
+        </li>
+        <li class="sd-policy">
+          <img src="assets/icons/stay/pol-1.svg" alt="">
+          <h3>الحيوانات الأليفة</h3>
+          <p>غير مسموح</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Similar stays — Figma 804:183 -->
+  <section class="sd-similar" id="sd-similar">
+    <div class="container">
+      <div class="sd-sec-head">
+        <h2 class="section-title">أماكن إقامة مشابهة</h2>
+        <a class="section-link" href="stays.html">عرض جميع الأماكن ›</a>
+      </div>
+      <div class="sd-similar-grid">
+        <a class="sd-similar-card" href="stay-details.html">
+          <img src="assets/img/stays/details/similar-4.png" alt="">
+          <div class="sd-similar-card__copy">
+            <h3>أكواخ السودة</h3>
+            <p>السودة، أبها</p>
+            <div class="sd-similar-card__meta">
+              <span>ابتداءً من 700 ر.س</span>
+              <span>★ 4.4</span>
+            </div>
+          </div>
+        </a>
+        <a class="sd-similar-card" href="stay-details.html">
+          <img src="assets/img/stays/details/similar-3.png" alt="">
+          <div class="sd-similar-card__copy">
+            <h3>منتجع قمم</h3>
+            <p>السودة، أبها</p>
+            <div class="sd-similar-card__meta">
+              <span>ابتداءً من 1,100 ر.س</span>
+              <span>★ 4.4</span>
+            </div>
+          </div>
+        </a>
+        <a class="sd-similar-card" href="stay-details.html">
+          <img src="assets/img/stays/details/similar-2.png" alt="">
+          <div class="sd-similar-card__copy">
+            <h3>شاليهات الضباب</h3>
+            <p>السودة، أبها</p>
+            <div class="sd-similar-card__meta">
+              <span>ابتداءً من 780 ر.س</span>
+              <span>★ 4.4</span>
+            </div>
+          </div>
+        </a>
+        <a class="sd-similar-card" href="stay-details.html">
+          <img src="assets/img/stays/details/similar-1.png" alt="">
+          <div class="sd-similar-card__copy">
+            <h3>منتجع أبها الورود</h3>
+            <p>السودة، أبها</p>
+            <div class="sd-similar-card__meta">
+              <span>ابتداءً من 900 ر.س</span>
+              <span>★ 4.4</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=48"></script>
 </body>
 </html>

@@ -4,10 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نتائج البحث | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=203">
 </head>
-<body data-page="home" data-header="solid">
-<section class="section" style="padding-top:160px"><div class="container"><h1>نتائج البحث</h1><form class="panel form-grid" style="margin:24px 0"><input name="q" placeholder="ابحث عن تجربة أو مكان أو نشاط..."></form><div class="card-grid"><a class="card" href="experience-details.html"><img class="thumb" src="assets/img/cta-mountains.png" alt=""><div class="body"><p class="muted">تجربة</p><h3>جولة شروق الشمس في أبها</h3></div></a><a class="card" href="stay-details.html"><img class="thumb" src="assets/img/hero-home.png" alt=""><div class="body"><p class="muted">إقامة</p><h3>فندق قصر أبها</h3></div></a></div></div></section>
-<script src="script.js"></script>
+<body data-page="search" data-header="solid">
+
+  <!-- Header band — Figma 1163:2 (solid dark, not photo hero) -->
+  <section class="sr-hero" aria-label="نتائج البحث">
+    <div class="container sr-hero__inner">
+      <p class="sr-hero__crumb">الرئيسية › نتائج البحث</p>
+      <h1>نتائج البحث</h1>
+      <p class="sr-hero__count" data-sr-count>24 نتيجة عن «أبها»</p>
+
+      <form class="sr-bar" action="search.html" method="get" role="search">
+        <label class="sr-bar__field">
+          <span class="sr-bar__ico" aria-hidden="true">⌕</span>
+          <input type="search" name="q" value="أبها" placeholder="ابحث عن تجربة أو مكان أو نشاط..." data-sr-input>
+        </label>
+        <button class="sr-bar__filter" type="button">تصفية</button>
+      </form>
+
+      <div class="sr-chips" data-filter-chips role="group" aria-label="تصفية النتائج">
+        <!-- RTL: rightmost first -->
+        <button type="button" class="sr-chip" data-filter="experiences">التجارب</button>
+        <button type="button" class="sr-chip" data-filter="stays">الإقامة</button>
+        <button type="button" class="sr-chip" data-filter="restaurants">المطاعم</button>
+        <button type="button" class="sr-chip" data-filter="events">الفعاليات</button>
+        <button type="button" class="sr-chip" data-filter="regions">المناطق</button>
+        <button type="button" class="sr-chip" data-filter="routes">المسارات</button>
+        <button type="button" class="sr-chip is-active" data-filter="all">الكل</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results — white -->
+  <section class="sr-results">
+    <div class="container">
+      <div class="sr-grid" data-sr-grid>
+        <!-- RTL physical order: rightmost card first -->
+        <a class="sr-card" href="restaurant-details.html" data-filter-item data-tags="restaurants أبها مطعم">
+          <img src="assets/img/search/card-resto.jpg" alt="">
+          <span class="sr-card__tag">مطعم</span>
+          <div class="sr-card__copy">
+            <h3>تراس أبها</h3>
+            <p>مأكولات عربية · 4.7 ★</p>
+          </div>
+        </a>
+        <a class="sr-card" href="stay-details.html" data-filter-item data-tags="stays أبها إقامة">
+          <img src="assets/img/search/card-stay.jpg" alt="">
+          <span class="sr-card__tag">إقامة</span>
+          <div class="sr-card__copy">
+            <h3>فندق قصر أبها</h3>
+            <p>أبها، عسير · من 620 ر.س</p>
+          </div>
+        </a>
+        <a class="sr-card" href="experience-details.html" data-filter-item data-tags="experiences أبها تجربة">
+          <img src="assets/img/search/card-exp.jpg" alt="">
+          <span class="sr-card__tag">تجربة</span>
+          <div class="sr-card__copy">
+            <h3>جولة شروق الشمس في أبها</h3>
+            <p>سهل · 4 ساعات</p>
+          </div>
+        </a>
+        <a class="sr-card" href="route-details.html" data-filter-item data-tags="routes أبها مسار">
+          <img src="assets/img/search/card-route.jpg" alt="">
+          <span class="sr-card__tag">مسار</span>
+          <div class="sr-card__copy">
+            <h3>مسار استكشاف أبها</h3>
+            <p>3 أيام · متوسط</p>
+          </div>
+        </a>
+        <a class="sr-card" href="abha.html" data-filter-item data-tags="regions أبها منطقة">
+          <img src="assets/img/search/card-region.jpg" alt="">
+          <span class="sr-card__tag">منطقة</span>
+          <div class="sr-card__copy">
+            <h3>أبها</h3>
+            <p>عاصمة عسير · القمم</p>
+          </div>
+        </a>
+        <a class="sr-card" href="event-details.html" data-filter-item data-tags="events أبها فعالية">
+          <img src="assets/img/search/card-event.jpg" alt="">
+          <span class="sr-card__tag">فعالية</span>
+          <div class="sr-card__copy">
+            <h3>مشاهدة النجوم - أبها</h3>
+            <p>18 أكتوبر · مساءً</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Empty — Figma 1181:145 -->
+      <div class="sr-empty" data-sr-empty hidden>
+        <div class="sr-empty__icon" aria-hidden="true">⌕</div>
+        <h2>لا توجد نتائج لبحثك</h2>
+        <p>جرّب كلمات مختلفة، أو تصفح التصنيفات التالية</p>
+        <div class="sr-empty__chips">
+          <button type="button" class="sr-chip sr-chip--light" data-filter="experiences">التجارب</button>
+          <button type="button" class="sr-chip sr-chip--light" data-filter="stays">الإقامة</button>
+          <button type="button" class="sr-chip sr-chip--light" data-filter="restaurants">المطاعم</button>
+          <button type="button" class="sr-chip sr-chip--light" data-filter="events">الفعاليات</button>
+          <button type="button" class="sr-chip sr-chip--light" data-filter="regions">المناطق</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=62"></script>
 </body>
 </html>

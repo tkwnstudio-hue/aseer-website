@@ -4,80 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>المطاعم والمقاهي | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=133">
 </head>
-<body data-page="restaurants" data-header="solid">
-  <section class="listing-hero listing-hero--resto">
+<body data-page="restaurants" data-header="transparent">
+  <section class="listing-hero listing-hero--home">
     <img class="listing-hero__bg" src="assets/img/restaurants/hero.png" alt="">
     <div class="listing-hero__overlay"></div>
     <div class="listing-hero__copy">
-      <p class="crumb">الرئيسية / المطاعم والمقاهي</p>
+      <p class="crumb">الرئيسية  /  المطاعم والمقاهي</p>
       <h1>المطاعم والمقاهي</h1>
       <p class="listing-hero__sub">نكهات عسير بين الإطلالة، القهوة، والمائدة المحلية</p>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div>
-          <strong>أطباق محلية</strong>
-          <span>من المطبخ العسيري</span>
-        </div>
-        <img src="assets/icons/resto-stat-dish.svg" width="19" height="18" alt="">
-      </div>
-      <div class="hero-stat">
-        <div>
-          <strong>مقاهي بإطلالة</strong>
-          <span>12</span>
-        </div>
-        <img src="assets/icons/resto-stat-cup.svg" width="21" height="19" alt="">
-      </div>
-      <div class="hero-stat">
-        <div>
-          <strong>مطاعم مختارة</strong>
-          <span>24</span>
-        </div>
-        <img src="assets/icons/resto-stat-fork.svg" width="17" height="18" alt="">
+      <div class="hero-pills">
+        <span>نكهات محلية</span>
+        <span>إطلالة مميزة</span>
+        <span>قهوة مختصة</span>
       </div>
     </div>
   </section>
 
-  <div class="listing-filter">
-    <form class="listing-filter__row" action="restaurants.html">
-      <label>
-        ابحث عن مكان
-        <input type="search" name="q" placeholder="ابحث عن مطعم أو مقهى...">
-      </label>
-      <label>
-        نوع المكان
-        <select name="type">
-          <option>كل الأنواع</option>
-          <option>مطعم</option>
-          <option>مقهى</option>
-        </select>
-      </label>
-      <label>
-        المنطقة
-        <select name="region">
-          <option>كل المناطق</option>
-          <option>أبها</option>
-          <option>السودة</option>
-          <option>رجال ألمع</option>
-          <option>تنومة</option>
-          <option>النماص</option>
-        </select>
-      </label>
-      <button class="btn btn-gold listing-filter__btn" type="submit">تصفية</button>
-    </form>
-    <div class="listing-chips" data-filter-chips>
-      <button class="chip is-active" type="button" data-filter="all">الكل</button>
-      <button class="chip" type="button" data-filter="مطاعم">مطاعم</button>
-      <button class="chip" type="button" data-filter="مقاهي">مقاهي</button>
-      <button class="chip" type="button" data-filter="أكل محلي">أكل محلي</button>
-      <button class="chip" type="button" data-filter="إطلالة">إطلالة</button>
-      <button class="chip" type="button" data-filter="عائلي">عائلي</button>
+  <div class="container">
+    <div class="exp-discovery">
+      <form class="exp-discovery-bar" action="restaurants.html">
+        <div class="exp-discovery-search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="q" data-listing-search placeholder="ابحث عن مطعم أو مقهى...">
+        </div>
+        <label class="ev-discovery-field">نوع المكان
+          <span class="plan-region">
+            <select name="type">
+              <option>كل الأنواع</option>
+              <option>مطعم</option>
+              <option>مقهى</option>
+            </select>
+          </span>
+        </label>
+        <label class="ev-discovery-field">المنطقة
+          <span class="plan-region">
+            <select name="region">
+              <option>كل المناطق</option>
+              <option>أبها</option>
+              <option>السودة</option>
+              <option>رجال ألمع</option>
+              <option>تنومة</option>
+              <option>النماص</option>
+            </select>
+          </span>
+        </label>
+        <button class="exp-discovery-filter-btn" type="submit">تصفية</button>
+      </form>
+      <div class="chip-row exp-discovery-chips" data-filter-chips>
+        <button class="chip is-active" type="button" data-filter="all">الكل</button>
+        <button class="chip" type="button" data-filter="مطاعم">مطاعم</button>
+        <button class="chip" type="button" data-filter="مقاهي">مقاهي</button>
+        <button class="chip" type="button" data-filter="أكل محلي">أكل محلي</button>
+        <button class="chip" type="button" data-filter="إطلالة">إطلالة</button>
+        <button class="chip" type="button" data-filter="عائلي">عائلي</button>
+      </div>
     </div>
   </div>
 
-  <section class="section section--white">
+  <p class="exp-filter-empty container" data-filter-empty hidden>لا توجد أماكن مطابقة. جرّب تصفية أخرى.</p>
+
+  <section class="section listing-sage resto-index">
+    <div class="container">
+      <div class="resto-index-row">
+        <a class="resto-index-path" href="#dishes">
+          <h3>أطباق محلية</h3>
+          <p>من المطبخ العسيري</p>
+        </a>
+        <a class="resto-index-path" href="restaurants.html?filter=مقاهي#places">
+          <h3>مقاهي بإطلالة</h3>
+          <p>12</p>
+        </a>
+        <a class="resto-index-path" href="restaurants.html?filter=مطاعم#places">
+          <h3>مطاعم مختارة</h3>
+          <p>24</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" data-filter-section>
     <div class="container">
       <div class="section-head">
         <h2 class="section-title">أماكن مختارة</h2>
@@ -172,34 +179,36 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section listing-sage">
     <div class="container">
-      <h2 class="section-title">تجارب طعام من عسير</h2>
+      <div class="exp-section-head">
+        <h2>تجارب طعام من عسير</h2>
+      </div>
       <p class="section-sub">اختر تجربة بطابع محلي وإطلالة لا تنسى</p>
-      <div class="food-exp-grid">
-        <a class="food-exp" href="restaurant-details.html">
+      <div class="grid grid-3 exp-selected-row">
+        <a class="exp-card" href="restaurant-details.html">
           <img src="assets/img/restaurants/exp-1.png" alt="">
-          <div class="food-exp__copy">
+          <span class="exp-card-tag">فطور</span>
+          <div class="exp-card-body">
             <h3>فطور جبلي</h3>
-            <p>ابدأ صباحك بنكهة عسيرية وإطلالة على الضباب.</p>
+            <span>ابدأ صباحك بنكهة عسيرية وإطلالة على الضباب.</span>
           </div>
-          <span class="food-exp__arrow">←</span>
         </a>
-        <a class="food-exp" href="restaurant-details.html">
+        <a class="exp-card" href="restaurant-details.html">
           <img src="assets/img/restaurants/exp-2.png" alt="">
-          <div class="food-exp__copy">
+          <span class="exp-card-tag">قهوة</span>
+          <div class="exp-card-body">
             <h3>قهوة على الإطلالة</h3>
-            <p>جلسة هادئة مع قهوة مختصة فوق قمم عسير.</p>
+            <span>جلسة هادئة مع قهوة مختصة فوق قمم عسير.</span>
           </div>
-          <span class="food-exp__arrow">←</span>
         </a>
-        <a class="food-exp" href="restaurant-details.html">
+        <a class="exp-card" href="restaurant-details.html">
           <img src="assets/img/restaurants/exp-3.png" alt="">
-          <div class="food-exp__copy">
+          <span class="exp-card-tag">عشاء</span>
+          <div class="exp-card-body">
             <h3>عشاء شعبي</h3>
-            <p>ليلة دافئة بالنكهات المحلية وأجواء القرية.</p>
+            <span>ليلة دافئة بالنكهات المحلية وأجواء القرية.</span>
           </div>
-          <span class="food-exp__arrow">←</span>
         </a>
       </div>
     </div>
@@ -208,72 +217,82 @@
   <section class="section section--white">
     <div class="container">
       <h2 class="section-title">حسب المنطقة</h2>
-      <div class="region-food-grid">
-        <a class="region-food" href="abha.html">
-          <img src="assets/img/restaurants/reg-abha.png" alt="">
-          <div><h3>أبها</h3><p>18 مكان</p></div>
+      <div class="exp-region-layout">
+        <a href="abha.html" class="exp-region-card exp-region-card--feature">
+          <img src="assets/img/restaurants/reg-abha.png" alt="" aria-hidden="true">
+          <div class="exp-region-card-content"><b>أبها</b><span>18 مكان</span></div>
         </a>
-        <a class="region-food" href="soudah.html">
-          <img src="assets/img/restaurants/reg-soudah.png" alt="">
-          <div><h3>السودة</h3><p>12 مكان</p></div>
-        </a>
-        <a class="region-food" href="rijal-alma.html">
-          <img src="assets/img/restaurants/reg-rijal.png" alt="">
-          <div><h3>رجال ألمع</h3><p>10 أماكن</p></div>
-        </a>
-        <a class="region-food" href="tanomah.html">
-          <img src="assets/img/restaurants/reg-tanomah.png" alt="">
-          <div><h3>تنومة</h3><p>8 أماكن</p></div>
-        </a>
-        <a class="region-food" href="al-namas.html">
-          <img src="assets/img/restaurants/reg-namas.png" alt="">
-          <div><h3>النماص</h3><p>9 أماكن</p></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">أطباق ننصح بها</h2>
-      <div class="dish-grid">
-        <article class="dish-tile">
-          <img src="assets/img/restaurants/dish-arika.png" alt="عريكة">
-          <h3>عريكة</h3>
-        </article>
-        <article class="dish-tile">
-          <img src="assets/img/restaurants/dish-haneeth.png" alt="حنيذ">
-          <h3>حنيذ</h3>
-        </article>
-        <article class="dish-tile">
-          <img src="assets/img/restaurants/dish-bread.png" alt="خبز التنور">
-          <h3>خبز التنور</h3>
-        </article>
-        <article class="dish-tile">
-          <img src="assets/img/restaurants/dish-coffee.png" alt="قهوة سعودية">
-          <h3>قهوة سعودية</h3>
-        </article>
-        <article class="dish-tile">
-          <img src="assets/img/restaurants/dish-honey.png" alt="عسل عسيري">
-          <h3>عسل عسيري</h3>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="listing-cta">
-        <img src="assets/img/restaurants/cta.png" alt="">
-        <div class="listing-cta__copy">
-          <h2>احجز جلستك بطابع عسيري</h2>
-          <p>أماكن مميزة، إطلالات خالدة، ونكهات لا تُنسى</p>
-          <a class="btn btn-gold" href="plan.html">خطط رحلتك الآن ←</a>
+        <div class="exp-region-grid">
+          <a href="soudah.html" class="exp-region-card">
+            <img src="assets/img/restaurants/reg-soudah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>السودة</b><span>12 مكان</span></div>
+          </a>
+          <a href="rijal-alma.html" class="exp-region-card">
+            <img src="assets/img/restaurants/reg-rijal.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>رجال ألمع</b><span>10 أماكن</span></div>
+          </a>
+          <a href="tanomah.html" class="exp-region-card">
+            <img src="assets/img/restaurants/reg-tanomah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>تنومة</b><span>8 أماكن</span></div>
+          </a>
+          <a href="al-namas.html" class="exp-region-card">
+            <img src="assets/img/restaurants/reg-namas.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>النماص</b><span>9 أماكن</span></div>
+          </a>
+          <a href="ballasmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balasmer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللسمر</b><span>6 أماكن</span></div>
+          </a>
+          <a href="ballahmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balhamer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللحمر</b><span>5 أماكن</span></div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <section class="section listing-sage" id="dishes">
+    <div class="container">
+      <h2 class="section-title">أطباق ننصح بها</h2>
+      <div class="resto-dishes">
+        <article class="resto-dish resto-dish--feature">
+          <img src="assets/img/restaurants/dish-arika.png" alt="عريكة">
+          <h3>عريكة</h3>
+        </article>
+        <div class="resto-dish-side">
+          <article class="resto-dish">
+            <img src="assets/img/restaurants/dish-haneeth.png" alt="حنيذ">
+            <h3>حنيذ</h3>
+          </article>
+          <article class="resto-dish">
+            <img src="assets/img/restaurants/dish-bread.png" alt="خبز التنور">
+            <h3>خبز التنور</h3>
+          </article>
+          <article class="resto-dish">
+            <img src="assets/img/restaurants/dish-coffee.png" alt="قهوة سعودية">
+            <h3>قهوة سعودية</h3>
+          </article>
+          <article class="resto-dish">
+            <img src="assets/img/restaurants/dish-honey.png" alt="عسل عسيري">
+            <h3>عسل عسيري</h3>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="exp-cta">
+      <div class="exp-cta-bg"><img src="assets/img/restaurants/cta.png" alt="" aria-hidden="true"></div>
+      <div class="exp-cta-content">
+        <h2>احجز جلستك بطابع عسيري</h2>
+        <p>أماكن مميزة، إطلالات خالدة، ونكهات لا تُنسى</p>
+        <a href="plan.html" class="exp-cta-btn">خطط رحلتك الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=35"></script>
 </body>
 </html>

@@ -4,119 +4,190 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خطط رحلتك | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=133">
 </head>
-<body data-page="plan" data-header="solid">
-  <section class="listing-hero">
+<body data-page="plan" data-header="transparent">
+  <section class="listing-hero listing-hero--home">
     <img class="listing-hero__bg" src="assets/img/plan/hero.png" alt="">
     <div class="listing-hero__overlay"></div>
     <div class="listing-hero__copy">
       <p class="crumb">الرئيسية  /  خطط رحلتك</p>
       <h1>خطط رحلتك</h1>
       <p class="listing-hero__sub">ابنِ رحلتك في عسير حسب وقتك، مزاجك، والمنطقة التي تناسبك</p>
+      <div class="hero-pills">
+        <span>حسب الوقت</span>
+        <span>حسب المنطقة</span>
+        <span>حسب المزاج</span>
+      </div>
     </div>
   </section>
 
-  <div class="listing-filter" style="padding-bottom:28px">
-    <form action="route-details.html">
-      <div class="listing-filter__row" style="grid-template-columns:1fr 1fr 1fr;align-items:start">
-        <div>
-          <p style="margin:0 0 10px;font-size:13px;font-weight:700">عدد الأيام</p>
-          <div class="listing-chips" style="margin:0">
-            <button class="chip" type="button">يوم واحد</button>
-            <button class="chip" type="button">يومان</button>
-            <button class="chip is-active" type="button">٣ أيام</button>
-            <button class="chip" type="button">أسبوع</button>
+  <div class="container plan-discovery-wrap" id="plan-discover">
+    <div class="listing-filter">
+      <form action="route-details.html">
+        <div class="plan-filter-row">
+          <div class="plan-disc-group">
+            <p class="plan-disc-label">عدد الأيام</p>
+            <div class="plan-chips">
+              <button class="chip" type="button">يوم واحد</button>
+              <button class="chip" type="button">يومان</button>
+              <button class="chip is-active" type="button">٣ أيام</button>
+              <button class="chip" type="button">أسبوع</button>
+            </div>
+          </div>
+          <div class="plan-disc-group ev-discovery-field">
+            <p class="plan-disc-label">اختر المنطقة أو القمة</p>
+            <div class="plan-region">
+              <select name="region">
+                <option>اختر المنطقة أو القمة</option>
+                <option>أبها</option>
+                <option>السودة</option>
+                <option>تنومة</option>
+                <option>النماص</option>
+                <option>بللسمر</option>
+                <option>بللحمر</option>
+                <option>رجال ألمع</option>
+                <option>المجاردة</option>
+                <option>بارق</option>
+                <option>محايل</option>
+                <option>البرك</option>
+                <option>القحمة</option>
+                <option>بيشة</option>
+                <option>سراة عبيدة</option>
+                <option>ظهران الجنوب</option>
+              </select>
+            </div>
+          </div>
+          <div class="plan-disc-group">
+            <p class="plan-disc-label">اختر مزاج رحلتك</p>
+            <div class="plan-chips">
+              <button class="chip is-active" type="button">طبيعة</button>
+              <button class="chip" type="button">ثقافة</button>
+              <button class="chip" type="button">مغامرة</button>
+              <button class="chip" type="button">عائلة</button>
+              <button class="chip" type="button">جلسات</button>
+            </div>
           </div>
         </div>
-        <label>
-          اختر المنطقة أو القمة
-          <select name="region">
-            <option>اختر المنطقة أو القمة</option>
-            <option>أبها</option>
-            <option>السودة</option>
-            <option>تنومة</option>
-            <option>النماص</option>
-            <option>بللسمر</option>
-            <option>بللحمر</option>
-            <option>رجال ألمع</option>
-            <option>المجاردة</option>
-            <option>بارق</option>
-            <option>محايل</option>
-            <option>البرك</option>
-            <option>القحمة</option>
-            <option>بيشة</option>
-            <option>سراة عبيدة</option>
-            <option>ظهران الجنوب</option>
-          </select>
-        </label>
-        <div>
-          <p style="margin:0 0 10px;font-size:13px;font-weight:700">اختر مزاج رحلتك</p>
-          <div class="listing-chips" style="margin:0">
-            <button class="chip is-active" type="button">طبيعة</button>
-            <button class="chip" type="button">ثقافة</button>
-            <button class="chip" type="button">مغامرة</button>
-            <button class="chip" type="button">عائلة</button>
-            <button class="chip" type="button">جلسات</button>
-          </div>
-        </div>
-      </div>
-      <p style="text-align:center;margin:24px 0 0"><button class="btn btn-gold" type="submit" style="min-width:300px;height:58px;font-size:22px;font-weight:700">ابدأ التخطيط</button></p>
-    </form>
+        <p class="plan-filter-cta"><button class="btn btn-gold" type="submit">ابدأ التخطيط<img src="assets/icons/icon-planner-cta.svg?v=2" width="28" height="28" alt="" aria-hidden="true"></button></p>
+      </form>
+    </div>
   </div>
 
-  <section class="section">
+  <section class="section plan-method">
     <div class="container">
       <h2 class="section-title">اختر طريقة التخطيط</h2>
-      <div class="method-grid">
-        <article class="method-card"><h3>حسب الوقت</h3><p>خطط رحلتك بناءً على المدة التي لديك</p></article>
-        <article class="method-card"><h3>حسب المنطقة</h3><p>اكتشف الوجهات والمناطق في عسير</p></article>
-        <article class="method-card"><h3>حسب التجربة</h3><p>اختر التجارب التي تناسب اهتماماتك ومزاجك</p></article>
+      <div class="plan-method-row">
+        <a class="plan-method-path" href="experiences.html">
+          <h3>حسب التجربة</h3>
+          <p>اختر التجارب التي تناسب اهتماماتك ومزاجك</p>
+        </a>
+        <a class="plan-method-path" href="peaks.html">
+          <h3>حسب المنطقة</h3>
+          <p>اكتشف الوجهات والمناطق في عسير</p>
+        </a>
+        <a class="plan-method-path" href="#plan-discover">
+          <h3>حسب الوقت</h3>
+          <p>خطط رحلتك بناءً على المدة التي لديك</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section section--white">
+  <section class="section plan-suggested">
     <div class="container">
       <h2 class="section-title">اقتراح رحلة جاهزة</h2>
-      <article class="trip-suggest" style="margin-top:24px">
-        <img src="assets/img/plan/trip.png" alt="يوم فوق الغيم">
+      <article class="plan-trip-card">
         <div class="copy">
-          <h3>يوم فوق الغيم</h3>
-          <div class="trip-step"><strong>صباحًا: السودة</strong><p>استمتع بإطلالة السودة وهوائها النقي.</p></div>
-          <div class="trip-step"><strong>ظهرًا: جلسة فوق السحاب</strong><p>جلسة استرخاء في مقهى مطل على السحاب.</p></div>
-          <div class="trip-step"><strong>مساءً: عشاء جبلي</strong><p>عشاء في مطعم جبلي بإطلالة خالدة.</p></div>
-          <a class="btn btn-green" href="route-details.html">اعتمد هذه الرحلة</a>
+          <div class="plan-trip-head">
+            <p class="plan-trip-badge">رحلة مقترحة<img class="mark" src="assets/icons/exp-badge-star.svg" width="28" height="28" alt=""></p>
+            <h3>يوم فوق الغيم</h3>
+            <p class="plan-trip-meta"><span>السودة</span><span>يوم واحد</span><span>طبيعة</span></p>
+          </div>
+          <div class="plan-trip-steps">
+            <div class="plan-trip-step">
+              <strong>صباحًا: السودة</strong>
+              <p>استمتع بإطلالة السودة وهوائها النقي.</p>
+            </div>
+            <div class="plan-trip-step">
+              <strong>ظهرًا: جلسة فوق السحاب</strong>
+              <p>جلسة استرخاء في مقهى مطل على السحاب.</p>
+            </div>
+            <div class="plan-trip-step">
+              <strong>مساءً: عشاء جبلي</strong>
+              <p>عشاء في مطعم جبلي بإطلالة خالدة.</p>
+            </div>
+          </div>
+          <a class="btn btn-gold" href="route-details.html">اعتمد هذه الرحلة<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a>
+        </div>
+        <div class="plan-trip-photo">
+          <span class="plan-trip-chip">يوم واحد</span>
+          <img src="assets/img/plan/trip.png" alt="يوم فوق الغيم">
         </div>
       </article>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section plan-sage">
     <div class="container">
       <h2 class="section-title">خصص تفاصيل رحلتك</h2>
-      <div class="detail-grid">
-        <div class="detail-box"><h3>عدد المسافرين</h3><p>2 بالغين</p></div>
-        <div class="detail-box"><h3>الميزانية</h3><p>متوسطة</p></div>
-        <div class="detail-box"><h3>وسيلة التنقل</h3><p>سيارة خاصة</p></div>
-        <div class="detail-box"><h3>سهولة الوصول</h3><p>غير متاح</p></div>
-        <div class="detail-box"><h3>مناسب للعائلة</h3><p>نعم</p></div>
-      </div>
+      <article class="plan-prefs">
+        <div class="plan-prefs-top">
+          <div class="plan-prefs-who">
+            <h3>عدد المسافرين</h3>
+            <p class="plan-prefs-note">بالغين</p>
+          </div>
+          <div class="plan-stepper">
+            <button type="button" data-step="minus" aria-label="إنقاص">−</button>
+            <span data-stepper-value>2</span>
+            <button type="button" data-step="plus" aria-label="زيادة">+</button>
+          </div>
+        </div>
+        <div class="plan-prefs-grid">
+          <div class="plan-pref">
+            <p class="plan-pref-label">الميزانية</p>
+            <div class="plan-chips">
+              <button class="chip" type="button">اقتصادية</button>
+              <button class="chip is-active" type="button">متوسطة</button>
+              <button class="chip" type="button">فاخرة</button>
+            </div>
+          </div>
+          <div class="plan-pref">
+            <p class="plan-pref-label">وسيلة التنقل</p>
+            <div class="plan-chips">
+              <button class="chip is-active" type="button">سيارة خاصة</button>
+            </div>
+          </div>
+          <div class="plan-pref">
+            <p class="plan-pref-label">مناسب للعائلة</p>
+            <div class="plan-chips">
+              <button class="chip is-active" type="button">نعم</button>
+              <button class="chip" type="button">لا</button>
+            </div>
+          </div>
+          <div class="plan-pref">
+            <p class="plan-pref-label">سهولة الوصول</p>
+            <div class="plan-chips">
+              <button class="chip" type="button">متاح</button>
+              <button class="chip is-active" type="button">غير متاح</button>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section plan-save">
     <div class="container">
-      <div class="listing-cta">
-        <img src="assets/img/plan/hero.png" alt="">
-        <div class="listing-cta__copy">
-          <h2>احفظ خطتك</h2>
-          <p>اقتربت خطتك من الاكتمال. احفظ خطتك لتتمكن من الرجوع إليها ومشاركتها في أي وقت.</p>
-          <a class="btn btn-gold" href="account.html">احفظ خطتك</a>
+      <div class="plan-save-cta">
+        <div class="plan-save-text">
+          <h2>اقتربت خطتك من الاكتمال</h2>
+          <p>احفظ خطتك لتتمكن من الرجوع إليها ومشاركتها في أي وقت.</p>
         </div>
+        <a class="btn btn-gold" href="account.html">احفظ خطتك<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a>
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+  <script src="script.js?v=35"></script>
 </body>
 </html>

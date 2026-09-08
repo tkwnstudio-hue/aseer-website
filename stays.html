@@ -4,102 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أماكن الإقامة | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=133">
 </head>
-<body data-page="stays" data-header="solid">
-  <section class="listing-hero">
-    <img class="listing-hero__bg" src="assets/img/stays/hero.png" alt="">
+<body data-page="stays" data-header="transparent">
+  <section class="listing-hero listing-hero--home">
+    <img class="listing-hero__bg" src="assets/img/stays/hero.jpg?v=3" alt="">
     <div class="listing-hero__overlay"></div>
     <div class="listing-hero__copy">
-      <p class="crumb">الرئيسية / الإقامة</p>
+      <p class="crumb">الرئيسية  /  الإقامة</p>
       <h1>إقامتك في عسير</h1>
       <p class="listing-hero__sub">تجارب إقامة استثنائية وسط الطبيعة الخلابة</p>
-    </div>
-    <div class="hero-pills">
-      <span>راحة وخصوصية</span>
-      <span>ضيافة أصيلة</span>
-      <span>إطلالات ساحرة</span>
+      <div class="hero-pills">
+        <span>راحة وخصوصية</span>
+        <span>ضيافة أصيلة</span>
+        <span>إطلالات ساحرة</span>
+      </div>
     </div>
   </section>
 
-  <div class="listing-filter">
-    <form class="listing-filter__row" action="stays.html" style="grid-template-columns:1.4fr 1fr 1fr 1fr auto">
-      <label>
-        ابحث عن مكان إقامة
-        <input type="search" name="q" placeholder="ابحث عن مكان إقامة">
-      </label>
-      <label>
-        التواريخ
-        <input type="text" value="22 يونيو  ←  24 يونيو" readonly>
-      </label>
-      <label>
-        النزلاء
-        <input type="text" value="النزلاء  2 بالغين" readonly>
-      </label>
-      <label>
-        الغرف
-        <input type="text" value="الغرف  1 غرفة" readonly>
-      </label>
-      <button class="btn btn-gold listing-filter__btn" type="submit">بحث</button>
-    </form>
+  <div class="container">
+    <div class="exp-discovery">
+      <form class="exp-discovery-bar" action="stays.html">
+        <div class="exp-discovery-search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="q" data-listing-search placeholder="ابحث عن مكان إقامة">
+        </div>
+        <label class="ev-discovery-field">التواريخ
+          <input type="text" name="dates" value="22 يونيو  ←  24 يونيو" readonly>
+        </label>
+        <label class="ev-discovery-field">النزلاء
+          <input type="text" name="guests" value="2 بالغين" readonly>
+        </label>
+        <label class="ev-discovery-field">الغرف
+          <input type="text" name="rooms" value="1 غرفة" readonly>
+        </label>
+        <button class="exp-discovery-filter-btn" type="submit">بحث</button>
+      </form>
+      <div class="chip-row exp-discovery-chips" data-filter-chips>
+        <button class="chip is-active" type="button" data-filter="all">الكل</button>
+        <button class="chip" type="button" data-filter="شاليهات">شاليهات</button>
+        <button class="chip" type="button" data-filter="منتجعات">منتجعات</button>
+        <button class="chip" type="button" data-filter="تراثي">تراثي</button>
+        <button class="chip" type="button" data-filter="فنادق">فنادق</button>
+      </div>
+    </div>
   </div>
 
-  <section class="section section--white">
+  <p class="exp-filter-empty container" data-filter-empty hidden>لا توجد إقامات مطابقة. جرّب تصفية أخرى.</p>
+
+  <section class="section listing-sage stay-index">
+    <div class="container">
+      <div class="stay-index-row">
+        <a class="stay-index-path" href="stays.html?filter=شاليهات#stays">
+          <h3>شاليهات</h3>
+          <p>18</p>
+        </a>
+        <a class="stay-index-path" href="stays.html?filter=منتجعات#stays">
+          <h3>منتجعات</h3>
+          <p>12</p>
+        </a>
+        <a class="stay-index-path" href="stays.html?filter=تراثي#stays">
+          <h3>بيوت تراثية</h3>
+          <p>9</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" data-filter-section>
     <div class="container">
       <div class="section-head">
         <h2 class="section-title">إقامات مميزة</h2>
-        <a class="section-link" href="stays.html">عرض الكل ←</a>
+        <a class="section-link" href="#stays">عرض الكل ←</a>
       </div>
-      <div class="place-grid" style="grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
-        <a class="place-card" href="stay-details.html">
-          <img class="place-card__img" src="assets/img/stays/card-1.png" alt="">
+      <div class="place-grid stay-place-grid" id="stays">
+        <a class="place-card" href="stay-details.html" data-filter-item data-tags="شاليهات تراثي">
+          <img class="place-card__img" src="assets/img/stays/card-1.png" alt="شاليهات قمم السودة">
+          <div class="place-card__top">
+            <img class="place-card__fav" src="assets/icons/icon-heart.svg" width="21" height="18" alt="">
+            <span class="place-card__badge">شاليه</span>
+          </div>
           <h3>شاليهات قمم السودة</h3>
-          <p class="place-card__loc">السودة</p>
-          <div class="place-card__foot"><span class="place-card__rate">★ 4.8</span><span class="tag">850 ريال / ليلة</span><span class="tag">تراثي</span></div>
+          <p class="place-card__loc">السودة <img src="assets/icons/icon-location.svg" width="16" height="21" alt=""></p>
+          <div class="place-card__foot">
+            <span class="place-card__rate">★ 4.8</span>
+            <span class="tag">850 ريال / ليلة</span>
+            <span class="tag">تراثي</span>
+          </div>
         </a>
-        <a class="place-card" href="stay-details.html">
-          <img class="place-card__img" src="assets/img/stays/card-2.png" alt="">
+        <a class="place-card" href="stay-details.html" data-filter-item data-tags="منتجعات تراثي">
+          <img class="place-card__img" src="assets/img/stays/card-2.png" alt="منتجع شدا أزل">
+          <div class="place-card__top">
+            <img class="place-card__fav" src="assets/icons/icon-heart.svg" width="21" height="18" alt="">
+            <span class="place-card__badge">منتجع</span>
+          </div>
           <h3>منتجع شدا أزل</h3>
-          <p class="place-card__loc">أبها</p>
-          <div class="place-card__foot"><span class="place-card__rate">★ 4.8</span><span class="tag">1200 ريال / ليلة</span><span class="tag">تراثي</span></div>
+          <p class="place-card__loc">أبها <img src="assets/icons/icon-location.svg" width="16" height="21" alt=""></p>
+          <div class="place-card__foot">
+            <span class="place-card__rate">★ 4.8</span>
+            <span class="tag">1200 ريال / ليلة</span>
+            <span class="tag">تراثي</span>
+          </div>
         </a>
-        <a class="place-card" href="stay-details.html">
-          <img class="place-card__img" src="assets/img/stays/card-3.png" alt="">
+        <a class="place-card" href="stay-details.html" data-filter-item data-tags="تراثي">
+          <img class="place-card__img" src="assets/img/stays/card-3.png" alt="بيت حسين التراثي">
+          <div class="place-card__top">
+            <img class="place-card__fav" src="assets/icons/icon-heart.svg" width="21" height="18" alt="">
+            <span class="place-card__badge">تراثي</span>
+          </div>
           <h3>بيت حسين التراثي</h3>
-          <p class="place-card__loc">محايل عسير</p>
-          <div class="place-card__foot"><span class="place-card__rate">★ 4.8</span><span class="tag">650 ريال / ليلة</span><span class="tag">تراثي</span></div>
+          <p class="place-card__loc">محايل عسير <img src="assets/icons/icon-location.svg" width="16" height="21" alt=""></p>
+          <div class="place-card__foot">
+            <span class="place-card__rate">★ 4.8</span>
+            <span class="tag">650 ريال / ليلة</span>
+            <span class="tag">تراثي</span>
+          </div>
         </a>
-        <a class="place-card" href="stay-details.html">
-          <img class="place-card__img" src="assets/img/stays/card-4.png" alt="">
+        <a class="place-card" href="stay-details.html" data-filter-item data-tags="منتجعات تراثي">
+          <img class="place-card__img" src="assets/img/stays/card-4.png" alt="منتجع رجال ألمع تراث">
+          <div class="place-card__top">
+            <img class="place-card__fav" src="assets/icons/icon-heart.svg" width="21" height="18" alt="">
+            <span class="place-card__badge">منتجع</span>
+          </div>
           <h3>منتجع رجال ألمع تراث</h3>
-          <p class="place-card__loc">رجال ألمع</p>
-          <div class="place-card__foot"><span class="place-card__rate">★ 4.8</span><span class="tag">950 ريال / ليلة</span><span class="tag">تراثي</span></div>
+          <p class="place-card__loc">رجال ألمع <img src="assets/icons/icon-location.svg" width="16" height="21" alt=""></p>
+          <div class="place-card__foot">
+            <span class="place-card__rate">★ 4.8</span>
+            <span class="tag">950 ريال / ليلة</span>
+            <span class="tag">تراثي</span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section listing-sage">
     <div class="container">
       <h2 class="section-title">تصفح حسب نوع الإقامة</h2>
-      <div class="type-grid">
-        <a class="type-card" href="stays.html"><img src="assets/icons/stay-type-1.svg" width="36" height="36" alt=""><h3>نزل وبيوت ضيافة</h3><p>ضيافة محلية دافئة</p></a>
-        <a class="type-card" href="stays.html"><img src="assets/icons/stay-type-2.svg" width="36" height="36" alt=""><h3>منتجعات</h3><p>منتجعات وشاليهات</p></a>
-        <a class="type-card" href="stays.html"><img src="assets/icons/stay-type-3.svg" width="36" height="36" alt=""><h3>شاليهات</h3><p>شاليهات خاصة</p></a>
-        <a class="type-card" href="stays.html"><img src="assets/icons/stay-type-4.svg" width="36" height="36" alt=""><h3>بيوت تراثية</h3><p>تجربة تراثية أصيلة</p></a>
-        <a class="type-card" href="stays.html"><img src="assets/icons/stay-type-5.svg" width="36" height="36" alt=""><h3>فنادق</h3><p>الفنادق الفاخرة</p></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="listing-cta">
-        <img src="assets/img/stays/inspire.png" alt="">
-        <div class="listing-cta__copy">
-          <h2>استمتع بإقامة لا تُنسى</h2>
-          <p>اكتشف مجموعة مختارة من أفضل أماكن الإقامة في عسير وعِش تجربة استثنائية</p>
-          <a class="btn btn-gold" href="stay-details.html">اكتشف المزيد ←</a>
+      <div class="stay-type-layout">
+        <a class="stay-type-card stay-type-card--feature" href="stays.html?filter=all#stays">
+          <img src="assets/img/stays/booked-4.png" alt="" aria-hidden="true">
+          <img class="ico" src="assets/icons/stay-type-1.svg" width="24" height="24" alt="">
+          <h3>نزل وبيوت ضيافة</h3>
+          <p>ضيافة محلية دافئة</p>
+        </a>
+        <div class="stay-type-grid">
+          <a class="stay-type-card" href="stays.html?filter=منتجعات#stays">
+            <img src="assets/img/stays/booked-1.png" alt="" aria-hidden="true">
+            <img class="ico" src="assets/icons/stay-type-2.svg" width="24" height="24" alt="">
+            <h3>منتجعات</h3>
+            <p>منتجعات وشاليهات</p>
+          </a>
+          <a class="stay-type-card" href="stays.html?filter=شاليهات#stays">
+            <img src="assets/img/stays/card-1.png" alt="" aria-hidden="true">
+            <img class="ico" src="assets/icons/stay-type-3.svg" width="24" height="24" alt="">
+            <h3>شاليهات</h3>
+            <p>شاليهات خاصة</p>
+          </a>
+          <a class="stay-type-card" href="stays.html?filter=تراثي#stays">
+            <img src="assets/img/stays/card-3.png" alt="" aria-hidden="true">
+            <img class="ico" src="assets/icons/stay-type-4.svg" width="24" height="24" alt="">
+            <h3>بيوت تراثية</h3>
+            <p>تجربة تراثية أصيلة</p>
+          </a>
+          <a class="stay-type-card" href="stays.html?filter=فنادق#stays">
+            <img src="assets/img/stays/booked-3.png" alt="" aria-hidden="true">
+            <img class="ico" src="assets/icons/stay-type-5.svg" width="24" height="24" alt="">
+            <h3>فنادق</h3>
+            <p>الفنادق الفاخرة</p>
+          </a>
         </div>
       </div>
     </div>
@@ -107,41 +180,123 @@
 
   <section class="section section--white">
     <div class="container">
+      <h2 class="section-title">حسب المنطقة</h2>
+      <div class="exp-region-layout">
+        <a href="soudah.html" class="exp-region-card exp-region-card--feature">
+          <img src="assets/img/exp-region-soudah.png" alt="" aria-hidden="true">
+          <div class="exp-region-card-content"><b>السودة</b><span>22 إقامة</span></div>
+        </a>
+        <div class="exp-region-grid">
+          <a href="abha.html" class="exp-region-card">
+            <img src="assets/img/exp-region-abha.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>أبها</b><span>36 إقامة</span></div>
+          </a>
+          <a href="tanomah.html" class="exp-region-card">
+            <img src="assets/img/exp-region-tanomah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>تنومة</b><span>14 إقامة</span></div>
+          </a>
+          <a href="al-namas.html" class="exp-region-card">
+            <img src="assets/img/exp-region-alnamas.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>النماص</b><span>11 إقامة</span></div>
+          </a>
+          <a href="rijal-alma.html" class="exp-region-card">
+            <img src="assets/img/exp-region-rijalalmaa.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>رجال ألمع</b><span>18 إقامة</span></div>
+          </a>
+          <a href="ballasmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balasmer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللسمر</b><span>9 إقامات</span></div>
+          </a>
+          <a href="ballahmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balhamer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللحمر</b><span>8 إقامات</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" data-filter-section>
+    <div class="container">
       <div class="section-head">
         <h2 class="section-title">الأكثر حجزاً</h2>
-        <a class="section-link" href="stays.html">عرض الكل ←</a>
+        <a class="section-link" href="#booked">عرض الكل ←</a>
       </div>
-      <div class="booked-grid">
-        <a class="booked-card" href="stay-details.html">
-          <img src="assets/img/stays/booked-1.png" alt="">
-          <div class="body"><p>01</p><h3>منتجع أبها الورود</h3><p>أبها</p><p>1100 ريال / ليلة · ★ 4.8</p></div>
+      <div class="stay-booked-grid" id="booked">
+        <a class="stay-booked-card" href="stay-details.html" data-filter-item data-tags="منتجعات">
+          <img src="assets/img/stays/booked-1.png" alt="منتجع أبها الورود">
+          <div class="stay-booked-body">
+            <span class="stay-booked-num">01</span>
+            <h3>منتجع أبها الورود</h3>
+            <p>أبها</p>
+            <span>1100 ريال / ليلة · ★ 4.8</span>
+          </div>
         </a>
-        <a class="booked-card" href="stay-details.html">
-          <img src="assets/img/stays/booked-2.png" alt="">
-          <div class="body"><p>02</p><h3>شاليهات الضباب</h3><p>السودة</p><p>780 ريال / ليلة · ★ 4.8</p></div>
+        <a class="stay-booked-card" href="stay-details.html" data-filter-item data-tags="شاليهات">
+          <img src="assets/img/stays/booked-2.png" alt="شاليهات الضباب">
+          <div class="stay-booked-body">
+            <span class="stay-booked-num">02</span>
+            <h3>شاليهات الضباب</h3>
+            <p>السودة</p>
+            <span>780 ريال / ليلة · ★ 4.8</span>
+          </div>
         </a>
-        <a class="booked-card" href="stay-details.html">
-          <img src="assets/img/stays/booked-3.png" alt="">
-          <div class="body"><p>03</p><h3>فندق قصر أبها</h3><p>أبها</p><p>900 ريال / ليلة · ★ 4.8</p></div>
+        <a class="stay-booked-card" href="stay-details.html" data-filter-item data-tags="فنادق">
+          <img src="assets/img/stays/booked-3.png" alt="فندق قصر أبها">
+          <div class="stay-booked-body">
+            <span class="stay-booked-num">03</span>
+            <h3>فندق قصر أبها</h3>
+            <p>أبها</p>
+            <span>900 ريال / ليلة · ★ 4.8</span>
+          </div>
         </a>
-        <a class="booked-card" href="stay-details.html">
-          <img src="assets/img/stays/booked-4.png" alt="">
-          <div class="body"><p>04</p><h3>بيت المسافر التراثي</h3><p>محايل عسير</p><p>600 ريال / ليلة · ★ 4.8</p></div>
+        <a class="stay-booked-card" href="stay-details.html" data-filter-item data-tags="تراثي">
+          <img src="assets/img/stays/booked-4.png" alt="بيت المسافر التراثي">
+          <div class="stay-booked-body">
+            <span class="stay-booked-num">04</span>
+            <h3>بيت المسافر التراثي</h3>
+            <p>محايل عسير</p>
+            <span>600 ريال / ليلة · ★ 4.8</span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section listing-sage">
     <div class="container">
-      <div class="benefits">
-        <div><h3>إلغاء مرن</h3><p>إلغاء مجاني وفق الشروط</p></div>
-        <div><h3>دعم على مدار الساعة</h3><p>فريق دعم جاهز لخدمتك</p></div>
-        <div><h3>حجز آمن وسهل</h3><p>تأكيد فوري وآمن</p></div>
-        <div><h3>أفضل الأسعار</h3><p>ضمان أفضل سعر</p></div>
+      <div class="stay-benefit-row">
+        <div class="stay-benefit-path">
+          <h3>إلغاء مرن</h3>
+          <p>إلغاء مجاني وفق الشروط</p>
+        </div>
+        <div class="stay-benefit-path">
+          <h3>دعم على مدار الساعة</h3>
+          <p>فريق دعم جاهز لخدمتك</p>
+        </div>
+        <div class="stay-benefit-path">
+          <h3>حجز آمن وسهل</h3>
+          <p>تأكيد فوري وآمن</p>
+        </div>
+        <div class="stay-benefit-path">
+          <h3>أفضل الأسعار</h3>
+          <p>ضمان أفضل سعر</p>
+        </div>
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+
+  <section class="section container">
+    <div class="exp-cta">
+      <div class="exp-cta-bg"><img src="assets/img/stays/inspire.png" alt="" aria-hidden="true"></div>
+      <div class="exp-cta-content">
+        <h2>استمتع بإقامة لا تُنسى</h2>
+        <p>اكتشف مجموعة مختارة من أفضل أماكن الإقامة في عسير وعِش تجربة استثنائية</p>
+        <a href="stay-details.html" class="exp-cta-btn">اكتشف المزيد</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=35"></script>
 </body>
 </html>

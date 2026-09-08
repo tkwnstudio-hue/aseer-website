@@ -3,140 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الفعاليات والخريطة | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <title>الفعاليات | عسير</title>
+  <link rel="stylesheet" href="style.css?v=144">
 </head>
-<body data-page="events" data-header="solid">
-  <section class="listing-hero">
+<body data-page="events" data-header="transparent">
+  <section class="listing-hero listing-hero--home">
     <img class="listing-hero__bg" src="assets/img/events/hero.png" alt="">
     <div class="listing-hero__overlay"></div>
     <div class="listing-hero__copy">
-      <p class="crumb">الرئيسية / الفعاليات والخريطة</p>
-      <h1>الفعاليات والخريطة</h1>
+      <p class="crumb">الرئيسية  /  الفعاليات</p>
+      <h1>الفعاليات</h1>
       <p class="listing-hero__sub">اكتشف ما يحدث في عسير، واختر فعالياتك حسب المكان والوقت</p>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div><strong>خريطة تفاعلية</strong><span>مباشرة</span></div></div>
-      <div class="hero-stat"><div><strong>7 مناطق</strong><span>قريبة منك</span></div></div>
-      <div class="hero-stat"><div><strong>هذا الأسبوع</strong><span>18 فعالية</span></div></div>
+      <div class="hero-pills">
+        <span>حسب المكان</span>
+        <span>مواسم متنوعة</span>
+        <span>مناسب للعائلة</span>
+      </div>
     </div>
   </section>
 
-  <div class="listing-filter">
-    <form class="listing-filter__row" action="events.html">
-      <label>ابحث عن فعالية<input type="search" name="q" placeholder="اسم الفعالية أو المنطقة..."></label>
-      <label>التاريخ<select><option>هذا الأسبوع</option><option>هذا الشهر</option></select></label>
-      <label>المنطقة<select><option>كل المناطق</option><option>أبها</option><option>السودة</option><option>رجال ألمع</option><option>تنومة</option></select></label>
-      <button class="btn btn-gold listing-filter__btn" type="submit">تصفية</button>
-    </form>
-    <div class="listing-chips">
-      <button class="chip is-active" type="button">ثقافة</button>
-      <button class="chip" type="button">عائلي</button>
-      <button class="chip" type="button">طبيعة</button>
-      <button class="chip" type="button">موسيقى</button>
-      <button class="chip" type="button">أسواق</button>
+  <div class="container">
+    <div class="exp-discovery">
+      <form class="exp-discovery-bar" action="events.html">
+        <div class="exp-discovery-search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="q" data-listing-search placeholder="اسم الفعالية أو المنطقة...">
+        </div>
+        <label class="ev-discovery-field">التاريخ
+          <select name="when"><option>هذا الأسبوع</option><option>هذا الشهر</option></select>
+        </label>
+        <label class="ev-discovery-field">المنطقة
+          <select name="region"><option>كل المناطق</option><option>أبها</option><option>السودة</option><option>رجال ألمع</option><option>تنومة</option></select>
+        </label>
+        <button class="exp-discovery-filter-btn" type="submit">تصفية</button>
+      </form>
+      <div class="chip-row exp-discovery-chips" data-filter-chips>
+        <button class="chip is-active" type="button" data-filter="all">الكل</button>
+        <button class="chip" type="button" data-filter="ثقافة">ثقافة</button>
+        <button class="chip" type="button" data-filter="عائلي">عائلي</button>
+        <button class="chip" type="button" data-filter="طبيعة">طبيعة</button>
+        <button class="chip" type="button" data-filter="موسيقى">موسيقى</button>
+        <button class="chip" type="button" data-filter="أسواق">أسواق</button>
+      </div>
     </div>
   </div>
 
-  <section class="section section--white">
+  <p class="exp-filter-empty container" data-filter-empty hidden>لا توجد فعاليات مطابقة. جرّب تصفية أخرى.</p>
+
+  <section class="ev-map-sec">
     <div class="container">
-      <h2 class="section-title">خريطة الفعاليات</h2>
-      <p class="section-sub">استعرض الفعاليات الأقرب إليك على خريطة عسير التفاعلية</p>
-      <div class="events-map" style="margin-top:24px">
-        <img class="map-shot" src="assets/img/events/map.png" alt="خريطة الفعاليات">
-        <div>
-          <div class="section-head"><h3>فعاليات هذا الأسبوع</h3><a class="section-link" href="events.html">عرض كل الفعاليات</a></div>
-          <div class="week-list" style="margin-top:16px">
-            <a class="week-item" href="event-details.html"><img src="assets/img/events/week-1.png" alt=""><div><h3>ليالي أبها الثقافية</h3><p>أبها · موسيقى وفنون · 22 يونيو</p></div></a>
-            <a class="week-item" href="event-details.html"><img src="assets/img/events/week-2.png" alt=""><div><h3>سوق الحرف الجبلية</h3><p>رجال ألمع · تراث وأسواق · 23 يونيو</p></div></a>
-            <a class="week-item" href="event-details.html"><img src="assets/img/events/week-3.png" alt=""><div><h3>مسار الغروب</h3><p>السودة · طبيعة ومشي · 24 يونيو</p></div></a>
-            <a class="week-item" href="event-details.html"><img src="assets/img/events/week-4.png" alt=""><div><h3>جلسات المطر</h3><p>تنومة · جلسات خارجية · 24 يونيو</p></div></a>
+      <div class="ev-map-head">
+        <h2>فعاليات حسب المكان</h2>
+        <p>محطات هذا الأسبوع — اختر مكانًا أو تصفّح القائمة</p>
+      </div>
+      <div class="ev-map-row">
+        <div class="ev-week-panel">
+          <div class="ev-week-head">
+            <img class="ev-week-cal" src="assets/icons/ev-calendar.svg" width="18" height="19" alt="" aria-hidden="true">
+            <h3>فعاليات هذا الأسبوع</h3>
           </div>
+          <div class="ev-week-list" id="week-events">
+            <a class="ev-week-item" href="event-details.html?id=nights" data-filter-item data-tags="ثقافة موسيقى أبها">
+              <div class="ev-week-date"><span>يونيو</span><strong>22</strong><span>الأحد</span></div>
+              <div class="ev-week-copy">
+                <h3>ليالي أبها الثقافية</h3>
+                <p>أبها · موسيقى وفنون<span class="ev-week-when"> · 22 يونيو</span></p>
+              </div>
+              <span class="ev-week-thumb"><img src="assets/img/events/week-1.png" alt=""></span>
+            </a>
+            <a class="ev-week-item" href="event-details.html?id=crafts" data-filter-item data-tags="أسواق ثقافة رجال">
+              <div class="ev-week-date"><span>يونيو</span><strong>23</strong><span>الأثنين</span></div>
+              <div class="ev-week-copy">
+                <h3>سوق الحرف الجبلية</h3>
+                <p>رجال ألمع · تراث وأسواق<span class="ev-week-when"> · 23 يونيو</span></p>
+              </div>
+              <span class="ev-week-thumb"><img src="assets/img/events/week-2.png" alt=""></span>
+            </a>
+            <a class="ev-week-item" href="event-details.html?id=sunset" data-filter-item data-tags="طبيعة السودة">
+              <div class="ev-week-date"><span>يونيو</span><strong>24</strong><span>الثلاثاء</span></div>
+              <div class="ev-week-copy">
+                <h3>مسار الغروب</h3>
+                <p>السودة · طبيعة ومشي<span class="ev-week-when"> · 24 يونيو</span></p>
+              </div>
+              <span class="ev-week-thumb"><img src="assets/img/events/week-3.png" alt=""></span>
+            </a>
+            <a class="ev-week-item" href="event-details.html?id=rain" data-filter-item data-tags="عائلي تنومة">
+              <div class="ev-week-date"><span>يونيو</span><strong>24</strong><span>الأربعاء</span></div>
+              <div class="ev-week-copy">
+                <h3>جلسات المطر</h3>
+                <p>تنومة · جلسات خارجية<span class="ev-week-when"> · 24 يونيو</span></p>
+              </div>
+              <span class="ev-week-thumb"><img src="assets/img/events/week-4.png" alt=""></span>
+            </a>
+          </div>
+          <a class="ev-week-more" href="events.html#exp-selected" data-filter-reset>
+            عرض كل الفعاليات
+            <img src="assets/icons/ev-arrow.svg" width="14" height="12" alt="" aria-hidden="true">
+          </a>
         </div>
+        <aside class="ev-place-board" aria-label="محطات هذا الأسبوع">
+          <p class="ev-place-board__hint">محطات هذا الأسبوع · ليست خريطة</p>
+          <ol class="ev-place-path">
+            <li>
+              <a class="ev-place-stop" href="abha.html">
+                <span class="ev-place-stop__num">1</span>
+                <span class="ev-place-stop__copy">
+                  <span class="ev-place-stop__name">أبها</span>
+                  <span class="ev-place-stop__note">ليالي ثقافية</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="ev-place-stop" href="rijal-alma.html">
+                <span class="ev-place-stop__num">2</span>
+                <span class="ev-place-stop__copy">
+                  <span class="ev-place-stop__name">رجال ألمع</span>
+                  <span class="ev-place-stop__note">سوق الحرف</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="ev-place-stop" href="soudah.html">
+                <span class="ev-place-stop__num">3</span>
+                <span class="ev-place-stop__copy">
+                  <span class="ev-place-stop__name">السودة</span>
+                  <span class="ev-place-stop__note">مسار الغروب</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="ev-place-stop" href="tanomah.html">
+                <span class="ev-place-stop__num">4</span>
+                <span class="ev-place-stop__copy">
+                  <span class="ev-place-stop__name">تنومة</span>
+                  <span class="ev-place-stop__note">جلسات المطر</span>
+                </span>
+              </a>
+            </li>
+          </ol>
+        </aside>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">فعاليات مميزة</h2>
-      <p class="section-sub">مختارة لتجربة عسير في نهاية الأسبوع</p>
-      <div class="place-grid">
-        <a class="place-card" href="event-details.html">
-          <img class="place-card__img" src="assets/img/events/feat-1.png" alt="">
-          <span class="place-card__badge" style="margin:10px 24px 0">عائلي</span>
-          <h3>مهرجان القرية</h3>
-          <p class="place-card__loc">رجال ألمع · تراث ومأكولات شعبية</p>
-          <div class="place-card__foot"><span class="tag">22 - 23 يونيو</span></div>
-        </a>
-        <a class="place-card" href="event-details.html">
-          <img class="place-card__img" src="assets/img/events/feat-2.png" alt="">
-          <span class="place-card__badge" style="margin:10px 24px 0">ثقافة</span>
-          <h3>ليالي أبها الثقافية</h3>
-          <p class="place-card__loc">أبها · موسيقى وفنون</p>
-          <div class="place-card__foot"><span class="tag">22 - 24 يونيو</span></div>
-        </a>
-        <a class="place-card" href="event-details.html">
-          <img class="place-card__img" src="assets/img/events/feat-3.png" alt="">
-          <span class="place-card__badge" style="margin:10px 24px 0">طبيعة</span>
+  <section class="exp-selected container" id="exp-selected" data-filter-section>
+    <div class="exp-section-head">
+      <h2>فعاليات مميزة</h2>
+    </div>
+    <p class="section-sub">مختارة لتجربة عسير في نهاية الأسبوع</p>
+    <div class="grid grid-3 exp-selected-row">
+      <a class="exp-card" href="event-details.html?id=stars" data-filter-item data-tags="طبيعة السودة">
+        <img src="assets/img/events/feat-3.png?v=2" alt="">
+        <span class="exp-card-tag">طبيعة</span>
+        <div class="exp-card-body">
           <h3>مشاهدة النجوم</h3>
-          <p class="place-card__loc">السودة · تجربة فلكية</p>
-          <div class="place-card__foot"><span class="tag">24 - 26 يونيو</span></div>
-        </a>
-      </div>
+          <span>السودة · تجربة فلكية</span>
+        </div>
+        <div class="exp-card-meta">
+          <span>24 - 26 يونيو</span>
+          <button class="heart exp-save" type="button" data-save="ev:stars" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button>
+        </div>
+      </a>
+      <a class="exp-card" href="event-details.html?id=nights" data-filter-item data-tags="ثقافة موسيقى أبها">
+        <img src="assets/img/events/feat-2.png" alt="">
+        <span class="exp-card-tag">ثقافة</span>
+        <div class="exp-card-body">
+          <h3>ليالي أبها الثقافية</h3>
+          <span>أبها · موسيقى وفنون</span>
+        </div>
+        <div class="exp-card-meta">
+          <span>22 - 24 يونيو</span>
+          <button class="heart exp-save" type="button" data-save="ev:nights" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button>
+        </div>
+      </a>
+      <a class="exp-card" href="event-details.html?id=village" data-filter-item data-tags="عائلي أسواق رجال">
+        <img src="assets/img/events/feat-1.png" alt="">
+        <span class="exp-card-tag">عائلي</span>
+        <div class="exp-card-body">
+          <h3>مهرجان القرية</h3>
+          <span>رجال ألمع · تراث ومأكولات شعبية</span>
+        </div>
+        <div class="exp-card-meta">
+          <span>22 - 23 يونيو</span>
+          <button class="heart exp-save" type="button" data-save="ev:village" aria-label="حفظ"><img src="assets/icons/exp-heart.svg" width="14" height="12" alt=""></button>
+        </div>
+      </a>
     </div>
   </section>
 
-  <section class="section section--white">
+  <section class="exp-region">
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">حسب المنطقة</h2>
-        <a class="section-link" href="events.html">عرض كل الفعاليات</a>
+      <div class="exp-section-head">
+        <h2>حسب المنطقة</h2>
+        <a href="events.html#week-events" class="view-all" data-filter-reset>عرض كل الفعاليات</a>
       </div>
       <p class="section-sub">ابدأ من أقرب منطقة لك وشاهد الفعاليات المتاحة</p>
-      <div class="region-food-grid">
-        <a class="region-food" href="abha.html"><img src="assets/img/restaurants/reg-abha.png" alt=""><div><h3>أبها</h3><p>8 فعاليات</p></div></a>
-        <a class="region-food" href="soudah.html"><img src="assets/img/restaurants/reg-soudah.png" alt=""><div><h3>السودة</h3><p>5 فعاليات</p></div></a>
-        <a class="region-food" href="rijal-alma.html"><img src="assets/img/restaurants/reg-rijal.png" alt=""><div><h3>رجال ألمع</h3><p>4 فعاليات</p></div></a>
-        <a class="region-food" href="tanomah.html"><img src="assets/img/restaurants/reg-tanomah.png" alt=""><div><h3>تنومة</h3><p>3 فعاليات</p></div></a>
-        <a class="region-food" href="al-namas.html"><img src="assets/img/restaurants/reg-namas.png" alt=""><div><h3>النماص</h3><p>2 فعاليات</p></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">تقويم الفعاليات</h2>
-      <p class="section-sub">نظرة أسبوعية سريعة على الفعاليات القادمة</p>
-      <div class="calendar">
-        <div class="calendar-day"><span>السبت</span><strong>21</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الأحد</span><strong>22</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الأثنين</span><strong>23</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الثلاثاء</span><strong>24</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الأربعاء</span><strong>25</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الخميس</span><strong>26</strong><span>يونيو</span></div>
-        <div class="calendar-day"><span>الجمعة</span><strong>27</strong><span>يونيو</span></div>
-      </div>
-      <div class="week-list" style="margin-top:24px">
-        <a class="week-item" href="event-details.html"><img src="assets/img/events/feat-2.png" alt=""><div><h3>ليالي أبها الثقافية</h3><p>أبها · موسيقى وفنون · ثقافة · 7:30 م</p></div></a>
-        <a class="week-item" href="event-details.html"><img src="assets/img/events/week-2.png" alt=""><div><h3>سوق الحرف الجبلية</h3><p>رجال ألمع · تراث وأسواق · أسواق · 5:30 م</p></div></a>
-        <a class="week-item" href="event-details.html"><img src="assets/img/events/week-4.png" alt=""><div><h3>جلسات سمر تنومة</h3><p>تنومة · جلسات خارجية · عائلي · 8:00 م</p></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="listing-cta">
-        <img src="assets/img/events/hero.png" alt="">
-        <div class="listing-cta__copy">
-          <h2>لا تفوّت فعاليات عسير</h2>
-          <p>احفظ فعالياتك المفضلة وشارك خطتك مع من تحب</p>
-          <a class="btn btn-gold" href="plan.html">ابدأ التخطيط</a>
+      <div class="exp-region-layout">
+        <a href="abha.html" class="exp-region-card exp-region-card--feature">
+          <img src="assets/img/exp-region-abha.png" alt="" aria-hidden="true">
+          <div class="exp-region-card-content"><b>أبها</b><span>8 فعاليات</span></div>
+        </a>
+        <div class="exp-region-grid">
+          <a href="soudah.html" class="exp-region-card">
+            <img src="assets/img/exp-region-soudah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>السودة</b><span>5 فعاليات</span></div>
+          </a>
+          <a href="rijal-alma.html" class="exp-region-card">
+            <img src="assets/img/exp-region-rijalalmaa.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>رجال ألمع</b><span>4 فعاليات</span></div>
+          </a>
+          <a href="tanomah.html" class="exp-region-card">
+            <img src="assets/img/exp-region-tanomah.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>تنومة</b><span>3 فعاليات</span></div>
+          </a>
+          <a href="al-namas.html" class="exp-region-card">
+            <img src="assets/img/exp-region-alnamas.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>النماص</b><span>2 فعاليات</span></div>
+          </a>
+          <a href="ballasmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balasmer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللسمر</b><span>2 فعاليات</span></div>
+          </a>
+          <a href="ballahmar.html" class="exp-region-card">
+            <img src="assets/img/exp-region-balhamer.png" alt="" aria-hidden="true">
+            <div class="exp-region-card-content"><b>بللحمر</b><span>1 فعالية</span></div>
+          </a>
         </div>
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+
+  <section class="ev-cal-sec">
+    <div class="container">
+      <div class="exp-mood-head">
+        <h2>تقويم الفعاليات</h2>
+        <p>نظرة أسبوعية سريعة على الفعاليات القادمة</p>
+      </div>
+      <div class="ev-cal-week">
+        <button class="ev-cal-day" type="button"><span>السبت</span><strong>21</strong></button>
+        <button class="ev-cal-day is-active" type="button"><span>الأحد</span><strong>22</strong></button>
+        <button class="ev-cal-day" type="button"><span>الأثنين</span><strong>23</strong></button>
+        <button class="ev-cal-day" type="button"><span>الثلاثاء</span><strong>24</strong></button>
+        <button class="ev-cal-day" type="button"><span>الأربعاء</span><strong>25</strong></button>
+        <button class="ev-cal-day" type="button"><span>الخميس</span><strong>26</strong></button>
+        <button class="ev-cal-day" type="button"><span>الجمعة</span><strong>27</strong></button>
+      </div>
+      <div class="exp-routes-row" data-filter-section>
+        <a class="exp-route-card" href="event-details.html?id=nights" data-filter-item data-tags="ثقافة موسيقى أبها">
+          <div class="exp-route-photo"><img src="assets/img/events/feat-2.png" alt=""></div>
+          <div class="exp-route-details">
+            <h3>ليالي أبها الثقافية</h3>
+            <p>أبها · موسيقى وفنون · 7:30 م</p>
+            <span class="meta">ثقافة</span>
+          </div>
+        </a>
+        <a class="exp-route-card" href="event-details.html?id=crafts" data-filter-item data-tags="أسواق ثقافة رجال">
+          <div class="exp-route-photo"><img src="assets/img/events/week-2.png" alt=""></div>
+          <div class="exp-route-details">
+            <h3>سوق الحرف الجبلية</h3>
+            <p>رجال ألمع · تراث وأسواق · 5:30 م</p>
+            <span class="meta">أسواق</span>
+          </div>
+        </a>
+        <a class="exp-route-card" href="event-details.html?id=samar" data-filter-item data-tags="عائلي تنومة">
+          <div class="exp-route-photo"><img src="assets/img/events/week-4.png" alt=""></div>
+          <div class="exp-route-details">
+            <h3>جلسات سمر تنومة</h3>
+            <p>تنومة · جلسات خارجية · 8:00 م</p>
+            <span class="meta">عائلي</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="exp-cta">
+      <div class="exp-cta-bg"><img src="assets/img/events/hero.png" alt="" aria-hidden="true"></div>
+      <div class="exp-cta-content">
+        <h2>لا تفوّت فعاليات عسير</h2>
+        <p>احفظ فعالياتك المفضلة وشارك خطتك مع من تحب</p>
+        <a href="plan.html" class="exp-cta-btn">ابدأ التخطيط</a>
+      </div>
+    </div>
+  </section>
+  <script src="script.js?v=40"></script>
 </body>
 </html>

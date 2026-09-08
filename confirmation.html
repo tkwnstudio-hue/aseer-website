@@ -4,11 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تأكيد الحجز | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=170">
 </head>
-<body data-page="stays" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/cta-mountains.png')"><div class="copy"><p class="crumb">الرئيسية / تأكيد الحجز</p><h1>تم تأكيد حجزك</h1><p>شكراً لك، سنراك في عسير.</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p>شكراً لك، سنراك في عسير.</p><p><a class="btn btn-gold" href="account.html">عرض حسابي</a></p></div></div></section>
-<script src="script.js"></script>
+<body data-page="stays" data-header="solid" data-confirm="success">
+
+  <section class="cf-page">
+    <div class="container">
+      <!-- Success — Figma 1143:87 (default) -->
+      <article class="cf-card" data-cf-success>
+        <div class="cf-card__icon cf-card__icon--ok" aria-hidden="true">✓</div>
+        <h1>تم تأكيد حجزك بنجاح!</h1>
+        <p class="cf-card__sub">سنرسل لك تفاصيل الحجز والفاتورة عبر البريد الإلكتروني</p>
+        <p class="cf-card__badge">رقم الحجز:  ASR-2026-48213</p>
+
+        <hr class="cf-card__rule">
+        <dl class="cf-card__rows">
+          <div><dt>الوجهة</dt><dd>شاليهات قمم السودة</dd></div>
+          <div><dt>تاريخ الوصول</dt><dd>12 أكتوبر 2026</dd></div>
+          <div><dt>تاريخ المغادرة</dt><dd>15 أكتوبر 2026</dd></div>
+          <div><dt>الضيوف</dt><dd>2 بالغين</dd></div>
+          <div><dt>طريقة الدفع</dt><dd>بطاقة ائتمانية تنتهي بـ 4242</dd></div>
+        </dl>
+        <hr class="cf-card__rule">
+
+        <div class="cf-card__total">
+          <span>المبلغ المدفوع</span>
+          <strong>3,070 ر.س</strong>
+        </div>
+
+        <div class="cf-card__actions">
+          <a class="btn btn-gold cf-card__btn" href="account.html">عرض تفاصيل الحجز</a>
+          <a class="btn cf-card__btn cf-card__btn--ghost" href="index.html">العودة للرئيسية</a>
+        </div>
+        <p class="cf-card__help">تحتاج مساعدة؟ <a href="contact.html">تواصل معنا</a> في أي وقت</p>
+      </article>
+
+      <!-- Failed — Figma 1181:393 (?state=failed) -->
+      <article class="cf-card" data-cf-failed hidden>
+        <div class="cf-card__icon cf-card__icon--fail" aria-hidden="true">✕</div>
+        <h1>لم تكتمل عملية الدفع</h1>
+        <p class="cf-card__sub">حدث خطأ أثناء معالجة الدفع. لم يتم خصم أي مبلغ من حسابك.</p>
+        <p class="cf-card__badge">رقم المحاولة:  ASR-2026-48213</p>
+
+        <hr class="cf-card__rule">
+        <dl class="cf-card__rows">
+          <div><dt>الوجهة</dt><dd>شاليهات قمم السودة</dd></div>
+          <div><dt>تاريخ الوصول</dt><dd>12 أكتوبر 2026</dd></div>
+          <div><dt>تاريخ المغادرة</dt><dd>15 أكتوبر 2026</dd></div>
+          <div><dt>الضيوف</dt><dd>2 بالغين</dd></div>
+          <div><dt>طريقة الدفع</dt><dd>بطاقة ائتمانية تنتهي بـ 4242</dd></div>
+        </dl>
+        <hr class="cf-card__rule">
+
+        <div class="cf-card__total">
+          <span>المبلغ المدفوع</span>
+          <strong>3,070 ر.س</strong>
+        </div>
+
+        <div class="cf-card__actions">
+          <a class="btn btn-gold cf-card__btn" href="checkout.html">إعادة المحاولة</a>
+          <a class="btn cf-card__btn cf-card__btn--ghost" href="checkout.html">تعديل طريقة الدفع</a>
+        </div>
+        <p class="cf-card__help">المشكلة مستمرة؟ <a href="contact.html">تواصل معنا</a> وسنساعدك فورًا</p>
+      </article>
+    </div>
+  </section>
+
+  <script src="script.js?v=50"></script>
 </body>
 </html>

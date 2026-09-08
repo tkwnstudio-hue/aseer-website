@@ -3,211 +3,561 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الصفحة الرئيسية | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <title>عسير | الرئيسية</title>
+  <link rel="stylesheet" href="style.css?v=160">
 </head>
 <body data-page="home" data-header="transparent">
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">منصة اكتشاف منطقة عسير</p>
-      <h1>عسير</h1>
-      <h2>حيث تلامس الجبال السحاب</h2>
-      <p>وجهة واحدة، عوالم متعددة. خطط رحلتك بين القمم والقرى والفعاليات والتجارب.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="plan.html">اصنع رحلتك <img src="assets/icons/icon-calendar.svg" width="30" height="33" alt=""></a>
-        <a class="btn btn-white" href="abha.html">اكتشف عسير <img src="assets/icons/icon-compass.svg" width="30" height="30" alt=""></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="feature-strip">
-    <div class="feature-item">
-      <div>
-        <h3>طبيعة ساحرة</h3>
-        <p>جبال شاهقة، وديان خضراء وضباب يلامس السماء</p>
-      </div>
-      <img src="assets/icons/icon-nature.svg" width="40" height="40" alt="">
-    </div>
-    <div class="feature-item">
-      <div>
-        <h3>تراث عريق</h3>
-        <p>كنوز تاريخية وحكايات قديمة وبيوت تقليدية أصيلة</p>
-      </div>
-      <img src="assets/icons/icon-fort.svg" width="40" height="42" alt="">
-    </div>
-    <div class="feature-item">
-      <div>
-        <h3>تجارب متنوعة</h3>
-        <p>مغامرات، استرخاء، وثقافة في مكان واحد</p>
-      </div>
-      <img src="assets/icons/icon-tent.svg" width="40" height="25" alt="">
-    </div>
-    <div class="feature-item">
-      <div>
-        <h3>ضيافة أصيلة</h3>
-        <p>كرم الضيافة والتقاليد في كل زاوية</p>
-      </div>
-      <img src="assets/icons/icon-hospitality.svg" width="28" height="28" alt="">
-    </div>
-  </section>
-
-  <section class="section" id="regions">
-    <div class="container regions-grid">
-      <div class="region-cards">
-        <a class="region-card" href="al-birk.html">
-          <img class="cover" src="assets/img/region-coast.png" alt="الساحل">
-          <div class="meta">
-            <img src="assets/icons/icon-coast.svg" width="34" height="30" alt="">
-            <h3>الساحل</h3>
-            <p>شواطئ نقية<br>وجزر خليجية</p>
-          </div>
-        </a>
-        <a class="region-card" href="rijal-alma.html">
-          <img class="cover" src="assets/img/region-tihama.png" alt="تهامة">
-          <div class="meta">
-            <img src="assets/icons/icon-tihama.svg" width="34" height="30" alt="">
-            <h3>تهامة</h3>
-            <p>طبيعة خضراء<br>وهواء عليل</p>
-          </div>
-        </a>
-        <a class="region-card" href="rijal-alma.html">
-          <img class="cover" src="assets/img/region-heritage.png" alt="تراث">
-          <div class="meta">
-            <img src="assets/icons/icon-heritage.svg" width="34" height="30" alt="">
-            <h3>تراث</h3>
-            <p>قرى تاريخية<br>وحكاية أصيلة</p>
-          </div>
-        </a>
-        <a class="region-card" href="soudah.html">
-          <img class="cover" src="assets/img/region-peaks.png" alt="القمم">
-          <div class="meta">
-            <img src="assets/icons/icon-coast.svg" width="34" height="30" alt="">
-            <h3>القمم</h3>
-            <p>قمم شاهقة<br>وضباب لا ينتهي</p>
-          </div>
-        </a>
-      </div>
-      <div>
-        <h2 class="section-title">استكشف مناطق عسير</h2>
-        <p class="section-sub">كل منطقة حكاية، وكل حكاية تستحق الاكتشاف</p>
-        <div class="map-panel" style="margin-top:32px">
-          <img src="assets/img/map-aseer.png" alt="خريطة عسير">
+  <main id="main">
+    <section class="hero">
+      <img class="hero-media" src="assets/img/hero-village-night.png" alt="">
+      <div class="hero-inner">
+        <p class="hero-eyebrow" data-i18n="hero_eyebrow">منصة اكتشاف منطقة عسير</p>
+        <h1>
+          <span data-i18n="hero_title_main">عسير</span>
+          <span class="hero-sub" data-i18n="hero_title_sub">حيث تلامس الجبال السحاب</span>
+        </h1>
+        <p data-i18n="hero_desc">وجهة واحدة، عوالم متعددة. خطط رحلتك بين القمم والقرى والفعاليات والتجارب.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="plan.html">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <span data-i18n="btn_plan_trip">اصنع رحلتك</span>
+          </a>
+          <a class="btn btn-white" href="index.html#regions">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M15.2 8.8 13 13l-4.2 2.2L11 11z"/></svg>
+            <span data-i18n="btn_explore">اكتشف عسير</span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="planner">
-      <div>
-        <div class="planner-inputs">
-          <label class="trip-input">
-            <span><small>الميزانية</small><select><option>متوسطة</option><option>اقتصادية</option><option>فاخرة</option></select></span>
-            <img src="assets/icons/icon-wallet.svg" width="32" height="32" alt="">
-          </label>
-          <label class="trip-input">
-            <span><small>الاهتمامات</small><select><option>طبيعة وتراث</option><option>مغامرة</option><option>ثقافة</option></select></span>
-            <img src="assets/icons/icon-leaf.svg" width="32" height="32" alt="">
-          </label>
-          <label class="trip-input">
-            <span><small>مع من؟</small><select><option>عائلة</option><option>أصدقاء</option><option>فردي</option></select></span>
-            <img src="assets/icons/icon-people.svg" width="32" height="32" alt="">
-          </label>
-          <label class="trip-input">
-            <span><small>الأيام</small><select><option>3 أيام</option><option>يوم واحد</option><option>يومان</option><option>أسبوع</option></select></span>
-            <img src="assets/icons/icon-days.svg" width="32" height="32" alt="">
-          </label>
+    <section class="feature-float container">
+      <div class="feature-strip card">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z"/><path d="M17 7h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M4 20h13"/></svg>
+          <div class="feature-copy">
+            <h3 data-i18n="feat1_t">ضيافة أصيلة</h3>
+            <p data-i18n="feat1_d">كرم الضيافة والتقاليد في كل زاوية</p>
+          </div>
         </div>
-        <div class="planner-visual">
-          <img src="assets/img/planner-route.png" alt="مسار مقترح">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-4 2-2 4 4-2z"/></svg>
+          <div class="feature-copy">
+            <h3 data-i18n="feat2_t">تجارب متنوعة</h3>
+            <p data-i18n="feat2_d">مغامرات، استرخاء، وثقافة في مكان واحد</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>
+          <div class="feature-copy">
+            <h3 data-i18n="feat3_t">تراث عريق</h3>
+            <p data-i18n="feat3_d">كنوز تاريخية وحكايات قديمة وبيوت تقليدية أصيلة</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 20 9 7l3 5 2-3 8 11z"/></svg>
+          <div class="feature-copy">
+            <h3 data-i18n="feat4_t">طبيعة ساحرة</h3>
+            <p data-i18n="feat4_d">جبال شاهقة، وديان خضراء وضباب يلامس السماء</p>
+          </div>
         </div>
       </div>
-      <div class="planner-summary">
-        <h2>اصنع رحلتك في عسير</h2>
-        <p>أخبرنا عن رحلتك وسنقترح لك أفضل المسارات والتجارب.</p>
-        <a class="btn btn-green" href="plan.html">صمم مساري <img src="assets/icons/icon-pin.svg" width="20" height="20" alt=""></a>
-        <article class="route-card">
+    </section>
+
+    <section class="section-md container" id="home-spotlight">
+      <header class="home-spot-head" data-reveal>
+        <h2 class="section-title" data-i18n="spot_title">مختارات المناطق</h2>
+        <p class="section-sub" data-i18n="spot_desc">أربع عوالم في عسير — تصفّح ثم انزل لاستكشاف أعمق</p>
+      </header>
+      <div class="home-spot" data-home-spot data-reveal>
+        <div class="home-spot__viewport">
+          <!-- RTL: first slide = القمم -->
+          <a class="home-spot__slide is-on" href="peaks.html" data-spot-slide>
+            <img src="assets/img/peaks/hero.jpg" alt="">
+            <div class="home-spot__wash" aria-hidden="true"></div>
+            <div class="home-spot__copy">
+              <span class="home-spot__tag" data-i18n="spot_tag_region">منطقة</span>
+              <h3 data-i18n="region_peaks_n">القمم</h3>
+              <p data-i18n-html="region_peaks_d">قمم شاهقة<br>وضباب لا ينتهي</p>
+              <span class="home-spot__cta"><span data-i18n="spot_cta">استكشف المنطقة</span> <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <a class="home-spot__slide" href="heritage.html" data-spot-slide>
+            <img src="assets/img/heritage/hero.jpg" alt="">
+            <div class="home-spot__wash" aria-hidden="true"></div>
+            <div class="home-spot__copy">
+              <span class="home-spot__tag" data-i18n="spot_tag_region">منطقة</span>
+              <h3 data-i18n="region_heritage_n">تراث</h3>
+              <p data-i18n-html="region_heritage_d">قرى تاريخية<br>وحكاية أصيلة</p>
+              <span class="home-spot__cta"><span data-i18n="spot_cta">استكشف المنطقة</span> <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <a class="home-spot__slide" href="coast.html" data-spot-slide>
+            <img src="assets/img/coast/hero.jpg" alt="">
+            <div class="home-spot__wash" aria-hidden="true"></div>
+            <div class="home-spot__copy">
+              <span class="home-spot__tag" data-i18n="spot_tag_region">منطقة</span>
+              <h3 data-i18n="region_coast_n">الساحل</h3>
+              <p data-i18n-html="region_coast_d">شواطئ نقية<br>وجزر خليجية</p>
+              <span class="home-spot__cta"><span data-i18n="spot_cta">استكشف المنطقة</span> <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <a class="home-spot__slide" href="desert.html" data-spot-slide>
+            <img src="assets/img/desert/hero.jpg" alt="">
+            <div class="home-spot__wash" aria-hidden="true"></div>
+            <div class="home-spot__copy">
+              <span class="home-spot__tag" data-i18n="spot_tag_region">منطقة</span>
+              <h3 data-i18n="region_desert_n">الصحراء والواحات</h3>
+              <p data-i18n-html="region_desert_d">واحات وسهول<br>عند حافة الصحراء</p>
+              <span class="home-spot__cta"><span data-i18n="spot_cta">استكشف المنطقة</span> <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="home-spot__nav">
+          <button class="home-spot__btn" type="button" data-spot-prev aria-label="السابق">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <div class="home-spot__dots" role="tablist" aria-label="شرائح المناطق">
+            <button class="is-on" type="button" role="tab" data-spot-dot="0" aria-selected="true" aria-label="القمم"></button>
+            <button type="button" role="tab" data-spot-dot="1" aria-selected="false" aria-label="تراث"></button>
+            <button type="button" role="tab" data-spot-dot="2" aria-selected="false" aria-label="الساحل"></button>
+            <button type="button" role="tab" data-spot-dot="3" aria-selected="false" aria-label="الصحراء والواحات"></button>
+          </div>
+          <button class="home-spot__btn" type="button" data-spot-next aria-label="التالي">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-md container" id="regions">
+      <div class="regions-head">
+        <h2 data-i18n="regions_title">استكشف مناطق عسير</h2>
+        <p data-i18n="regions_subtitle">كل منطقة حكاية، وكل حكاية تستحق الاكتشاف</p>
+      </div>
+      <div class="regions-map-wrap">
+        <aside class="regions-guide" data-map aria-label="مناطق عسير">
+          <p class="regions-guide__hint">أربع مناطق · اختر محطة أو بطاقة</p>
+          <!-- RTL vertical path: first = top = القمم -->
+          <ol class="regions-guide-path">
+            <li>
+              <button class="regions-guide-stop is-on" type="button" data-region="peaks">
+                <span class="regions-guide-stop__num">1</span>
+                <span class="regions-guide-stop__copy">
+                  <span class="regions-guide-stop__name" data-i18n="region_peaks_n">القمم</span>
+                  <span class="regions-guide-stop__note">مرتفعات وضباب</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="regions-guide-stop" type="button" data-region="heritage">
+                <span class="regions-guide-stop__num">2</span>
+                <span class="regions-guide-stop__copy">
+                  <span class="regions-guide-stop__name" data-i18n="region_heritage_n">تراث</span>
+                  <span class="regions-guide-stop__note">قرى وحكاية</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="regions-guide-stop" type="button" data-region="coast">
+                <span class="regions-guide-stop__num">3</span>
+                <span class="regions-guide-stop__copy">
+                  <span class="regions-guide-stop__name" data-i18n="region_coast_n">الساحل</span>
+                  <span class="regions-guide-stop__note">شواطئ وجزر</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="regions-guide-stop" type="button" data-region="desert">
+                <span class="regions-guide-stop__num">4</span>
+                <span class="regions-guide-stop__copy">
+                  <span class="regions-guide-stop__name" data-i18n="region_desert_n">الصحراء والواحات</span>
+                  <span class="regions-guide-stop__note">واحات وسهول</span>
+                </span>
+              </button>
+            </li>
+          </ol>
+        </aside>
+        <div class="region-card-rail">
+          <a class="region-card is-on" href="peaks.html" data-region="peaks">
+            <img class="cover" src="assets/img/peaks/hero.jpg" alt="">
+            <div class="meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 20 9 7l3 5 2-3 8 11z"/></svg>
+              <h3 data-i18n="region_peaks_n">القمم</h3>
+              <p data-i18n-html="region_peaks_d">قمم شاهقة<br>وضباب لا ينتهي</p>
+            </div>
+          </a>
+          <a class="region-card" href="heritage.html" data-region="heritage">
+            <img class="cover" src="assets/img/heritage/hero.jpg" alt="">
+            <div class="meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>
+              <h3 data-i18n="region_heritage_n">تراث</h3>
+              <p data-i18n-html="region_heritage_d">قرى تاريخية<br>وحكاية أصيلة</p>
+            </div>
+          </a>
+          <a class="region-card" href="coast.html" data-region="coast">
+            <img class="cover" src="assets/img/coast/hero.jpg" alt="">
+            <div class="meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 17c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0"/><path d="M2 21c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0"/><circle cx="17" cy="6" r="3"/></svg>
+              <h3 data-i18n="region_coast_n">الساحل</h3>
+              <p data-i18n-html="region_coast_d">شواطئ نقية<br>وجزر خليجية</p>
+            </div>
+          </a>
+          <a class="region-card" href="desert.html" data-region="desert">
+            <img class="cover" src="assets/img/desert/hero.jpg" alt="">
+            <div class="meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18c2-4 4-7 7-7s5 3 7 7"/><circle cx="12" cy="8" r="2"/></svg>
+              <h3 data-i18n="region_desert_n">الصحراء والواحات</h3>
+              <p data-i18n-html="region_desert_d">واحات وسهول<br>عند حافة الصحراء</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-md container">
+      <div class="trip-planner">
+        <div class="trip-summary">
           <div>
-            <h3>مثال لمسار مقترح</h3>
-            <p>3 أيام - عائلة - طبيعة وتراث - ميزانية متوسطة<br>أبها ← رجال ألمع ← تنومة</p>
+            <h2 data-i18n="planner_t">اصنع رحلتك في عسير</h2>
+            <p data-i18n="planner_d">أخبرنا عن رحلتك وسنقترح لك أفضل المسارات والتجارب.</p>
           </div>
-          <img src="assets/img/stats-thumb.png" width="104" height="80" alt="">
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="events-head">
-        <div class="month-tabs">
-          <button type="button" data-month="aug">أغسطس</button>
-          <button type="button" data-month="jul">يوليو</button>
-          <button class="is-active" type="button" data-month="jun">يونيو</button>
+          <a href="plan.html" class="btn btn-primary" data-i18n="btn_design_route">صمم مساري</a>
+          <div class="suggested-route-card" data-suggested-route>
+            <div class="flex-col gap-8" style="text-align:start">
+              <h4 data-i18n="suggested_route_t">مثال لمسار مقترح</h4>
+              <p data-route-summary data-i18n="suggested_route_d1">3 أيام - عائلة - طبيعة وتراث - ميزانية متوسطة</p>
+              <p data-route-path data-i18n="suggested_route_d2">أبها ← رجال ألمع ← تنومة</p>
+            </div>
+            <img src="assets/img/suggested-route-thumb.png" alt="">
+          </div>
         </div>
-        <h2 class="section-title">عسير هذا الصيف</h2>
-        <p class="section-sub">فعاليات وتجارب تنتظرك في كل مكان</p>
+        <div class="flex-col gap-16">
+          <div class="trip-inputs-row">
+            <label class="trip-input">
+              <svg class="trip-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><rect x="8" y="13" width="3" height="3" rx="0.5" fill="currentColor" stroke="none"/></svg>
+              <div>
+                <div class="trip-input-label" data-i18n="trip_days_l">الأيام</div>
+                <select class="trip-input-value" data-trip="days">
+                  <option value="3" data-i18n-opt="trip_days_3">3 أيام</option>
+                  <option value="1" data-i18n-opt="trip_days_1">يوم واحد</option>
+                  <option value="2" data-i18n-opt="trip_days_2">يومان</option>
+                  <option value="7" data-i18n-opt="trip_days_7">أسبوع</option>
+                </select>
+              </div>
+            </label>
+            <label class="trip-input">
+              <svg class="trip-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg>
+              <div>
+                <div class="trip-input-label" data-i18n="trip_group_l">مع من؟</div>
+                <select class="trip-input-value" data-trip="group">
+                  <option value="family" data-i18n-opt="trip_group_family">عائلة</option>
+                  <option value="friends" data-i18n-opt="trip_group_friends">أصدقاء</option>
+                  <option value="solo" data-i18n-opt="trip_group_solo">فردي</option>
+                </select>
+              </div>
+            </label>
+            <label class="trip-input">
+              <svg class="trip-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1-7 2-13 12-15 1 9-3 14-12 15Z"/><path d="M7 19c3-4 6-7 10-12"/></svg>
+              <div>
+                <div class="trip-input-label" data-i18n="trip_interests_l">الاهتمامات</div>
+                <select class="trip-input-value" data-trip="interests">
+                  <option value="nature" data-i18n-opt="trip_interests_nature">طبيعة وتراث</option>
+                  <option value="adventure" data-i18n-opt="trip_interests_adv">مغامرة</option>
+                  <option value="culture" data-i18n-opt="trip_interests_culture">ثقافة</option>
+                </select>
+              </div>
+            </label>
+            <label class="trip-input">
+              <svg class="trip-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h11l3 3v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M16 8h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a2 2 0 0 1 0-4Z"/></svg>
+              <div>
+                <div class="trip-input-label" data-i18n="trip_budget_l">الميزانية</div>
+                <select class="trip-input-value" data-trip="budget">
+                  <option value="mid" data-i18n-opt="trip_budget_mid">متوسطة</option>
+                  <option value="eco" data-i18n-opt="trip_budget_eco">اقتصادية</option>
+                  <option value="lux" data-i18n-opt="trip_budget_lux">فاخرة</option>
+                </select>
+              </div>
+            </label>
+          </div>
+          <div class="trip-path" data-trip-path>
+            <p class="trip-path__hint" data-i18n="trip_path_hint">مسار مقترح · ليس خريطة</p>
+            <!-- RTL: first = rightmost = اليوم 1 -->
+            <ol class="trip-path__days">
+              <li>
+                <a class="trip-day" href="abha.html" data-trip-day>
+                  <span class="trip-day__media"><img src="assets/img/peaks/abha.jpg" alt="" data-trip-day-img></span>
+                  <span class="trip-day__body">
+                    <span class="trip-day__num">1</span>
+                    <span class="trip-day__label" data-i18n="trip_day_1">اليوم 1</span>
+                    <strong data-trip-day-name>أبها</strong>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="trip-day" href="rijal-alma.html" data-trip-day>
+                  <span class="trip-day__media"><img src="assets/img/heritage/rijalalma.jpg" alt="" data-trip-day-img></span>
+                  <span class="trip-day__body">
+                    <span class="trip-day__num">2</span>
+                    <span class="trip-day__label" data-i18n="trip_day_2">اليوم 2</span>
+                    <strong data-trip-day-name>رجال ألمع</strong>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="trip-day" href="tanomah.html" data-trip-day>
+                  <span class="trip-day__media"><img src="assets/img/peaks/tanomah.jpg" alt="" data-trip-day-img></span>
+                  <span class="trip-day__body">
+                    <span class="trip-day__num">3</span>
+                    <span class="trip-day__label" data-i18n="trip_day_3">اليوم 3</span>
+                    <strong data-trip-day-name>تنومة</strong>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
-      <div class="event-rail">
-        <a class="event-card" href="event-details.html" data-event-month="jun">
-          <img src="assets/img/event-balloons.png" alt="مهرجان الطيران المناطيد">
-          <div class="meta"><small>20 يونيو - 10 أغسطس</small><div><h3>مهرجان الطيران<br>المناطيد</h3><span>عسير</span></div></div>
-        </a>
-        <a class="event-card" href="event-details.html" data-event-month="jun">
-          <img src="assets/img/event-honey.png" alt="مهرجان العسل">
-          <div class="meta"><small>15 - 25 يونيو</small><div><h3>مهرجان العسل<br>بالمجاردة</h3><span>المجاردة</span></div></div>
-        </a>
-        <a class="event-card" href="event-details.html" data-event-month="jun">
-          <img src="assets/img/event-heritage.png" alt="مهرجان رجال ألمع">
-          <div class="meta"><small>10 - 20 يونيو</small><div><h3>مهرجان رجال ألمع</h3><span>التراثي</span></div></div>
-        </a>
-        <a class="event-card" href="event-details.html" data-event-month="jun">
-          <img src="assets/img/event-shopping.png" alt="مهرجان أبها للتسوق">
-          <div class="meta"><small>5 - 15 يونيو</small><div><h3>مهرجان أبها<br>للتسوق</h3><span>أبها</span></div></div>
-        </a>
-      </div>
-      <div class="center-cta">
-        <a class="btn btn-green" href="events.html">عرض جميع الفعاليات</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="stats">
-      <div class="stats-brand">
-        <img src="assets/icons/logo-mark.svg" width="43" height="43" alt="">
-        <div class="logo-ar">عسير</div>
-        <div class="logo-en">A S E E R</div>
-      </div>
-      <div class="stats-msg">عسير ليست وجهة فقط<br>بل إحساس يبقى معك</div>
-      <div class="stats-rail">
-        <div class="stat"><div><b>11</b><span>محافظة</span><span>تجربة متنوعة</span></div><img src="assets/icons/icon-stats-regions.svg" width="38" height="38" alt=""></div>
-        <div class="stat"><div><b>3000+</b><span>متر فوق سطح البحر</span><span>في أعلى القمم</span></div><img src="assets/icons/icon-stats-altitude.svg" width="38" height="38" alt=""></div>
-        <div class="stat"><div><b>100+</b><span>مسار سياحي</span><span>بانتظار اكتشافك</span></div><img src="assets/icons/icon-stats-routes.svg" width="38" height="38" alt=""></div>
-        <div class="stat"><div><b>4</b><span>فصول ساحرة</span><span>تجربة لا تنتهي</span></div><img src="assets/icons/icon-stats-seasons.svg" width="38" height="38" alt=""></div>
-      </div>
-    </div>
-  </section>
+    <section class="section section--events" id="home-events">
+      <div class="events-panel home-ev">
+        <header class="home-ev-head" data-reveal>
+          <!-- RTL: first = rightmost — عنوان يمين، شهور يسار -->
+          <div class="home-ev-titles">
+            <h2 class="section-title" data-i18n="events_title">عسير هذا الصيف</h2>
+            <p class="section-sub" data-i18n="events_desc">فعاليات وتجارب تنتظرك في كل مكان</p>
+          </div>
+          <div class="month-tabs" role="tablist" aria-label="أشهر الصيف">
+            <button type="button" role="tab" data-month="aug" aria-selected="false" data-i18n="ev_tab_aug">أغسطس</button>
+            <button type="button" role="tab" data-month="jul" aria-selected="false" data-i18n="ev_tab_jul">يوليو</button>
+            <button class="is-active" type="button" role="tab" data-month="jun" aria-selected="true" data-i18n="ev_tab_jun">يونيو</button>
+          </div>
+        </header>
 
-  <section class="footer-cta">
-    <div class="footer-cta-inner">
-      <div class="footer-cta-copy">
-        <h2>رحلتك إلى عسير تبدأ من هنا</h2>
-        <p>وجهة لا تزار فقط، بل تُحس</p>
-        <a class="btn btn-gold" href="plan.html">ابدأ رحلتك الآن <img src="assets/icons/icon-pin.svg" width="28" height="28" alt=""></a>
+        <!-- يونيو -->
+        <div class="home-ev-stage" data-month-panel="jun" data-reveal>
+          <a class="home-ev-feature" href="event-details.html?id=balloons">
+            <img src="assets/img/events/home/balloons.jpg" alt="مناطيد فوق قمم عسير">
+            <div class="home-ev-feature__wash" aria-hidden="true"></div>
+            <div class="home-ev-feature__copy">
+              <span class="home-ev-feature__tag">موسمي</span>
+              <span class="home-ev-feature__date">20 يونيو — 10 أغسطس</span>
+              <h3>مهرجان الطيران المناطيد</h3>
+              <p>عسير · تجربة فوق القمم</p>
+              <span class="home-ev-feature__cta">تفاصيل الفعالية <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <aside class="home-ev-agenda" aria-label="أبرز فعاليات يونيو">
+            <div class="home-ev-agenda__head">
+              <img src="assets/icons/ev-calendar.svg" width="18" height="19" alt="" aria-hidden="true">
+              <h3>أبرز فعاليات يونيو</h3>
+            </div>
+            <div class="home-ev-agenda__list">
+              <a class="home-ev-item" href="event-details.html?id=shopping">
+                <div class="home-ev-item__date"><span>يونيو</span><strong>5–15</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مهرجان أبها للتسوق</h4>
+                  <p>أبها · أسواق وعروض</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/week-1.png" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=heritage">
+                <div class="home-ev-item__date"><span>يونيو</span><strong>10–20</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مهرجان رجال ألمع التراثي</h4>
+                  <p>رجال ألمع · تراث وفنون</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/home/heritage.jpg" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=honey">
+                <div class="home-ev-item__date"><span>يونيو</span><strong>15–25</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مهرجان العسل بالمجاردة</h4>
+                  <p>المجاردة · منتجات محلية</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/home/honey.jpg" alt=""></span>
+              </a>
+            </div>
+            <a class="home-ev-agenda__more" href="events.html">
+              عرض كل الفعاليات
+              <img src="assets/icons/ev-arrow.svg" width="14" height="12" alt="" aria-hidden="true">
+            </a>
+          </aside>
+        </div>
+
+        <!-- يوليو -->
+        <div class="home-ev-stage" data-month-panel="jul" hidden>
+          <a class="home-ev-feature" href="event-details.html?id=nights">
+            <img src="assets/img/events/feat-2.png" alt="">
+            <div class="home-ev-feature__wash" aria-hidden="true"></div>
+            <div class="home-ev-feature__copy">
+              <span class="home-ev-feature__tag">ثقافة</span>
+              <span class="home-ev-feature__date">1 — 20 يوليو</span>
+              <h3>ليالي أبها الثقافية</h3>
+              <p>أبها · موسيقى وفنون</p>
+              <span class="home-ev-feature__cta">تفاصيل الفعالية <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <aside class="home-ev-agenda" aria-label="أبرز فعاليات يوليو">
+            <div class="home-ev-agenda__head">
+              <img src="assets/icons/ev-calendar.svg" width="18" height="19" alt="" aria-hidden="true">
+              <h3>أبرز فعاليات يوليو</h3>
+            </div>
+            <div class="home-ev-agenda__list">
+              <a class="home-ev-item" href="event-details.html?id=balloons">
+                <div class="home-ev-item__date"><span>يوليو</span><strong>طوال</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مهرجان الطيران المناطيد</h4>
+                  <p>عسير · مستمر من يونيو</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/home/balloons.jpg" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=sunset">
+                <div class="home-ev-item__date"><span>يوليو</span><strong>8–12</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مسار الغروب</h4>
+                  <p>السودة · طبيعة ومشي</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/week-3.png" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=rain">
+                <div class="home-ev-item__date"><span>يوليو</span><strong>18–22</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>جلسات المطر</h4>
+                  <p>تنومة · عائلي</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/week-4.png" alt=""></span>
+              </a>
+            </div>
+            <a class="home-ev-agenda__more" href="events.html">
+              عرض كل الفعاليات
+              <img src="assets/icons/ev-arrow.svg" width="14" height="12" alt="" aria-hidden="true">
+            </a>
+          </aside>
+        </div>
+
+        <!-- أغسطس -->
+        <div class="home-ev-stage" data-month-panel="aug" hidden>
+          <a class="home-ev-feature" href="event-details.html?id=village">
+            <img src="assets/img/events/home/heritage.jpg" alt="حِرف وتراث عسير">
+            <div class="home-ev-feature__wash" aria-hidden="true"></div>
+            <div class="home-ev-feature__copy">
+              <span class="home-ev-feature__tag">عائلي</span>
+              <span class="home-ev-feature__date">5 — 25 أغسطس</span>
+              <h3>مهرجان القرية</h3>
+              <p>رجال ألمع · تراث ومأكولات</p>
+              <span class="home-ev-feature__cta">تفاصيل الفعالية <span aria-hidden="true">←</span></span>
+            </div>
+          </a>
+          <aside class="home-ev-agenda" aria-label="أبرز فعاليات أغسطس">
+            <div class="home-ev-agenda__head">
+              <img src="assets/icons/ev-calendar.svg" width="18" height="19" alt="" aria-hidden="true">
+              <h3>أبرز فعاليات أغسطس</h3>
+            </div>
+            <div class="home-ev-agenda__list">
+              <a class="home-ev-item" href="event-details.html?id=balloons">
+                <div class="home-ev-item__date"><span>أغسطس</span><strong>حتى 10</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>مهرجان الطيران المناطيد</h4>
+                  <p>عسير · ختام الموسم</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/home/balloons.jpg" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=stars">
+                <div class="home-ev-item__date"><span>أغسطس</span><strong>12–16</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>ليالي النجوم</h4>
+                  <p>السودة · تجربة فلكية</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/week-4.png" alt=""></span>
+              </a>
+              <a class="home-ev-item" href="event-details.html?id=crafts">
+                <div class="home-ev-item__date"><span>أغسطس</span><strong>20–28</strong></div>
+                <div class="home-ev-item__copy">
+                  <h4>سوق الحرف الجبلية</h4>
+                  <p>رجال ألمع · أسواق</p>
+                </div>
+                <span class="home-ev-item__thumb"><img src="assets/img/events/home/heritage.jpg" alt=""></span>
+              </a>
+            </div>
+            <a class="home-ev-agenda__more" href="events.html">
+              عرض كل الفعاليات
+              <img src="assets/icons/ev-arrow.svg" width="14" height="12" alt="" aria-hidden="true">
+            </a>
+          </aside>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn-green" href="events.html" data-i18n="btn_view_all">عرض جميع الفعاليات</a>
+        </div>
       </div>
-      <div class="footer-cta-brand">
-        <a class="logo" href="index.html">
-          <span class="logo-text">
-            <span class="logo-ar">عسير</span>
-            <span class="logo-en">A S E E R</span>
-          </span>
-          <img class="logo-mark" src="assets/icons/logo-mark-lg.svg" width="82" height="82" alt="">
-        </a>
-        <p>حيث تلامس الجبال السحاب</p>
+    </section>
+
+    <section class="section section--stats" id="home-stats">
+      <div class="home-stats" data-reveal>
+        <div class="home-stats__bg" aria-hidden="true">
+          <img src="assets/img/peaks/hero.jpg" alt="">
+        </div>
+        <div class="home-stats__inner">
+          <div class="home-stats__brand">
+            <svg class="home-stats__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 4 34h32L20 4Z"/><path d="M20 4v30M13 34 20 16M27 34 20 16"/></svg>
+            <div class="home-stats__word">
+              <b>عسير</b>
+              <small>ASEER</small>
+            </div>
+            <p class="home-stats__msg" data-i18n-html="stats_message">عسير ليست وجهة فقط<br>بل إحساس يبقى معك</p>
+          </div>
+          <div class="home-stats__rail">
+            <!-- RTL: first = rightmost — 11 → 3000+ → 100+ → 4 -->
+            <article class="home-stats__card">
+              <span class="home-stats__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21v-9"/><path d="M12 12c-2.2-.3-6-2-7-6.5C8.7 6 12 8 12 12Z"/><path d="M12 12c2.2-.3 6-2 7-6.5C15.3 6 12 8 12 12Z"/></svg>
+              </span>
+              <b>11</b>
+              <span data-i18n="stat_regions_l1">محافظة</span>
+              <span data-i18n="stat_regions_l2">تجربة متنوعة</span>
+            </article>
+            <article class="home-stats__card">
+              <span class="home-stats__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17.5 9 9l2.3 3.4L14 9l7 8.5"/></svg>
+              </span>
+              <b>3000+</b>
+              <span data-i18n="stat_altitude_l1">متر فوق سطح البحر</span>
+              <span data-i18n="stat_altitude_l2">في أعلى القمم</span>
+            </article>
+            <article class="home-stats__card">
+              <span class="home-stats__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 14.5c2.2-3.6 4-3.6 5.4-1.3s3.1 2.3 4.5-.9 2.3-3.4 4.5-2.7 2.6 1.7 4.6 2.4"/></svg>
+              </span>
+              <b>100+</b>
+              <span data-i18n="stat_routes_l1">مسار سياحي</span>
+              <span data-i18n="stat_routes_l2">بانتظار اكتشافك</span>
+            </article>
+            <article class="home-stats__card">
+              <span class="home-stats__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7.3" r="3.6"/><circle cx="8.7" cy="13.6" r="3.6"/><circle cx="15.3" cy="13.6" r="3.6"/></svg>
+              </span>
+              <b>4</b>
+              <span data-i18n="stat_seasons_l1">فصول ساحرة</span>
+              <span data-i18n="stat_seasons_l2">تجربة لا تنتهي</span>
+            </article>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-<script src="script.js"></script>
+    </section>
+
+    <section class="section container">
+      <div class="exp-cta">
+        <div class="exp-cta-bg"><img src="assets/img/footer-cta-mountains.png" alt="" aria-hidden="true"></div>
+        <div class="exp-cta-content">
+          <h2 data-i18n="cta_title">رحلتك إلى عسير تبدأ من هنا</h2>
+          <p data-i18n="cta_desc">وجهة لا تزار فقط، بل تُحس</p>
+          <a href="plan.html" class="exp-cta-btn" data-i18n="btn_start_trip">ابدأ رحلتك الآن</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="script.js?v=47"></script>
 </body>
 </html>

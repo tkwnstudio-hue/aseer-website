@@ -1,14 +1,249 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أبها | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=154">
 </head>
-<body data-page="explore" data-header="solid">
-  <section class="page-hero" style="background-image:url('assets/img/hero-home.png')"><div class="copy"><p class="crumb">استكشف عسير / أبها</p><h1>أبها</h1><p>وجهة المدينة الجبلية في عسير</p></div></section>
-<section class="section"><div class="container"><div class="panel"><p class="muted">حيث تلتقي روح المدينة بإطلالات الجبال، وتمنح أبها زائرها تجربة تجمع بين الطبيعة والثقافة والأسواق والمقاهي المطلة على قمم عسير.</p><div class="filters" style="margin-top:24px"><span class="chip is-active">ارتفاع 2,270 م</span><span class="chip">أجواء معتدلة</span><span class="chip">تراث وفنون</span><span class="chip">قلب عسير</span></div><h2 class="section-title">لماذا أبها؟</h2><p class="section-sub">ثلاثة أسباب تجعل أبها جزءاً أصيلاً من اكتشاف القمم.</p><div class="card-grid" style="margin-top:28px"><article class="card"><div class="body"><h3>هوية الوجهة</h3><p>حيث تلتقي روح المدينة بإطلالات الجبال، وتمنح أبها زائرها تجربة تجمع بين الطبيعة والثقافة والأسواق والمقاهي المطلة على قمم عسير.</p></div></article><article class="card"><div class="body"><h3>جرّب المكان</h3><p>استكشف تجارب أبها من الإطلالات إلى الأسواق والضيافة المحلية.</p></div></article><article class="card"><div class="body"><h3>خطط لزيارتك</h3><p>اربط زيارتك لـ أبها بمسار أيامك في عسير.</p><p><a class="btn btn-gold" href="plan.html">خطط لزيارتك</a></p></div></article></div><p style="margin-top:28px"><a class="btn btn-green" href="experiences.html">استكشف تجارب أبها</a></p></div></div></section>
-<script src="script.js"></script>
+<body data-page="destination" data-destination="abha" data-header="transparent">
+  <!-- Figma 978:3 Hero — Abha -->
+  <section class="listing-hero dest-hero">
+    <img class="listing-hero__bg" src="assets/img/destinations/abha/hero.jpg" alt="أبها">
+    <div class="listing-hero__overlay"></div>
+    <div class="listing-hero__copy">
+      <p class="crumb">استكشف عسير / أبها</p>
+      <h1>أبها</h1>
+      <p class="listing-hero__sub">وجهة المدينة الجبلية في عسير</p>
+      <p class="dest-hero__desc">حيث تلتقي روح المدينة بإطلالات الجبال، وتمنح أبها زائرها تجربة تجمع بين الطبيعة والثقافة والأسواق والمقاهي المطلة على قمم عسير.</p>
+      <div class="dest-hero__actions">
+        <a class="btn btn-gold" href="plan.html">خطط لزيارتك لأبها</a>
+        <a class="btn btn-white" href="experiences.html?filter=القمم#exp-selected">استكشف تجارب أبها</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick facts — floating white card (hero-stats / listing pattern) -->
+  <div class="dest-facts" aria-label="حقائق سريعة">
+    <!-- RTL: first = rightmost -->
+    <div class="dest-fact">
+      <img src="assets/icons/dest/fact-altitude.svg" width="36" height="36" alt="">
+      <span>ارتفاع 2,270 م</span>
+    </div>
+    <div class="dest-fact">
+      <img src="assets/icons/dest/fact-heart.svg" width="36" height="36" alt="">
+      <span>قلب عسير</span>
+    </div>
+    <div class="dest-fact">
+      <img src="assets/icons/dest/fact-heritage.svg" width="36" height="36" alt="">
+      <span>تراث وفنون</span>
+    </div>
+    <div class="dest-fact">
+      <img src="assets/icons/dest/fact-weather.svg" width="36" height="36" alt="">
+      <span>أجواء معتدلة</span>
+    </div>
+  </div>
+
+  <!-- Figma 978:69 Why Abha -->
+  <section class="dest-why">
+    <div class="container">
+      <header class="dest-head">
+        <p class="dest-eyebrow">هوية الوجهة</p>
+        <h2 class="section-title">لماذا أبها؟</h2>
+        <p class="dest-lead">ثلاثة أسباب تجعل أبها بداية مثالية لاكتشاف عسير.</p>
+      </header>
+      <div class="dest-why__grid">
+        <!-- RTL: first = rightmost = مدينة جبلية نابضة -->
+        <article class="dest-why-card">
+          <span class="dest-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/why-city.svg" width="28" height="28" alt="">
+          </span>
+          <h3>مدينة جبلية نابضة</h3>
+          <p>تجمع أبها بين أجواء المرتفعات وروح المدينة، لتكون نقطة انطلاق مريحة نحو وجهات عسير.</p>
+          <span class="dest-why-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="dest-why-card">
+          <span class="dest-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/why-culture.svg" width="28" height="28" alt="">
+          </span>
+          <h3>ثقافة وأسواق</h3>
+          <p>أسواق شعبية وفنون ومذاقات محلية تمنح الزائر تجربة قريبة من هوية المنطقة.</p>
+          <span class="dest-why-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="dest-why-card">
+          <span class="dest-why-card__ico" aria-hidden="true">
+            <img src="assets/icons/dest/why-views.svg" width="28" height="28" alt="">
+          </span>
+          <h3>إطلالات قريبة</h3>
+          <p>من المدينة تصل بسهولة إلى مطلات وحدائق ومواقع طبيعية تكشف جمال جبال عسير.</p>
+          <span class="dest-why-card__accent" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Figma 978:91 Experiences -->
+  <section class="dest-exps">
+    <div class="container">
+      <header class="dest-head">
+        <p class="dest-eyebrow">جرّب المكان</p>
+        <h2 class="section-title">تجارب أبها</h2>
+        <p class="dest-lead">شبكة كروت واسعة تعرض تجارب المدينة الجبلية، من الإطلالات القريبة إلى الأسواق والمقاهي والوجهات الثقافية.</p>
+      </header>
+      <div class="dest-exps__grid">
+        <!-- Row visual RTL: مطلات | شارع الفن | أسواق -->
+        <a class="dest-card" href="experiences.html?filter=القمم#exp-selected">
+          <img src="assets/img/destinations/abha/exp-3.jpg" alt="مطلات أبها">
+          <div class="dest-card__body">
+            <h3>مطلات أبها</h3>
+            <p>مشاهد قريبة تكشف المدينة والجبال من زوايا مختلفة.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card" href="experiences.html?filter=الثقافة#exp-selected">
+          <img src="assets/img/destinations/abha/exp-2.jpg" alt="شارع الفن">
+          <div class="dest-card__body">
+            <h3>شارع الفن</h3>
+            <p>مسار حضري يجمع الجداريات والمقاهي والحياة المسائية.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card" href="experiences.html?filter=الثقافة#exp-selected">
+          <img src="assets/img/destinations/abha/exp-1.jpg" alt="الأسواق الشعبية">
+          <div class="dest-card__body">
+            <h3>الأسواق الشعبية</h3>
+            <p>تجربة محلية للمنتجات والحرف والمذاقات العسيرية.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <!-- Row 2: قصر شدا | حدائق | مقاهي -->
+        <a class="dest-card" href="experiences.html?filter=الثقافة#exp-selected">
+          <img src="assets/img/destinations/abha/exp-6.jpg" alt="قصر شدا">
+          <div class="dest-card__body">
+            <h3>قصر شدا</h3>
+            <p>محطة تراثية تعكس ملامح العمارة والذاكرة المحلية.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card" href="experiences.html?filter=الطبيعة#exp-selected">
+          <img src="assets/img/destinations/abha/exp-5.jpg" alt="حدائق ومتنزهات جبلية">
+          <div class="dest-card__body">
+            <h3>حدائق ومتنزهات جبلية</h3>
+            <p>مساحات خضراء قريبة تناسب الجلسات العائلية.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card" href="experiences.html?filter=الجلسات#exp-selected">
+          <img src="assets/img/destinations/abha/exp-4.jpg" alt="مقاهي بإطلالة">
+          <div class="dest-card__body">
+            <h3>مقاهي بإطلالة</h3>
+            <p>توقفات هادئة بين أجواء المدينة والمرتفعات.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Figma 978:135 A day in Abha -->
+  <section class="dest-day">
+    <div class="container">
+      <header class="dest-head">
+        <p class="dest-eyebrow">اقتراح تجربة</p>
+        <h2 class="section-title">يوم في أبها</h2>
+        <p class="dest-lead">تجربة هادئة تبدأ بمشهد مطل على المدينة، وتمر بالأسواق والمقاهي، وتنتهي بجلسة مسائية بين أجواء أبها الباردة.</p>
+      </header>
+      <div class="dest-day__grid">
+        <!-- RTL: 1 rightmost -->
+        <article class="dest-day-card">
+          <span class="dest-day-card__num">1</span>
+          <p class="dest-day-card__when">الصباح</p>
+          <h3>مطل المدينة</h3>
+          <p>بداية هادئة مع إطلالة على أبها والمرتفعات.</p>
+          <span class="dest-day-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="dest-day-card">
+          <span class="dest-day-card__num">2</span>
+          <p class="dest-day-card__when">منتصف اليوم</p>
+          <h3>ثقافة وأسواق</h3>
+          <p>جولة خفيفة بين الأسواق والفنون والمقاهي المحلية.</p>
+          <span class="dest-day-card__accent" aria-hidden="true"></span>
+        </article>
+        <article class="dest-day-card">
+          <span class="dest-day-card__num">3</span>
+          <p class="dest-day-card__when">المساء</p>
+          <h3>جلسة باردة</h3>
+          <p>توقف مسائي هادئ بين أجواء أبها الباردة وإطلالاتها.</p>
+          <span class="dest-day-card__accent" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Figma 978:165 Near Abha -->
+  <section class="dest-near">
+    <div class="container">
+      <header class="dest-head">
+        <p class="dest-eyebrow">أقرب الوجهات</p>
+        <h2 class="section-title">بالقرب من أبها</h2>
+        <p class="dest-lead">وجهات قريبة تساعدك على توسيع رحلتك من قلب المدينة إلى الجبال والتراث.</p>
+      </header>
+      <div class="dest-near__grid">
+        <!-- RTL: from Abha outward — خميس يمينًا ثم منتزهات ثم رجال ثم السودة -->
+        <a class="dest-card dest-card--near" href="experiences.html?filter=القمم#exp-selected">
+          <img src="assets/img/destinations/abha/near-1.png" alt="خميس مشيط">
+          <div class="dest-card__body">
+            <h3>خميس مشيط</h3>
+            <p>مدينة قريبة للتسوق والمطاعم والخدمات.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card dest-card--near" href="experiences.html?filter=الطبيعة#exp-selected">
+          <img src="assets/img/destinations/abha/near-2.png" alt="منتزهات عسير">
+          <div class="dest-card__body">
+            <h3>منتزهات عسير</h3>
+            <p>مساحات طبيعية ومواقع عائلية بين الجبال والغابات.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card dest-card--near" href="rijal-alma.html">
+          <img src="assets/img/destinations/abha/near-3.png" alt="رجال ألمع">
+          <div class="dest-card__body">
+            <h3>رجال ألمع</h3>
+            <p>قرية تراثية بطابع معماري وثقافي مميز.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+        <a class="dest-card dest-card--near" href="soudah.html">
+          <img src="assets/img/destinations/abha/near-4.png" alt="السودة">
+          <div class="dest-card__body">
+            <h3>السودة</h3>
+            <p>قمم وضباب وإطلالات باردة على مسافة قريبة من أبها.</p>
+            <span class="dest-card__accent" aria-hidden="true"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — same shell as stays/experiences .exp-cta -->
+  <section class="dest-cta-sec">
+    <div class="container">
+      <div class="exp-cta">
+        <div class="exp-cta-bg"><img src="assets/img/destinations/abha/cta.png" alt="" aria-hidden="true"></div>
+        <div class="exp-cta-content">
+          <h2>ابدأ رحلتك إلى أبها</h2>
+          <p>جهّز خطتك واكتشف أبها بين إطلالات الجبال، أسواقها القريبة، ومقاهيها التي تمنح اليوم إيقاعًا مختلفًا.</p>
+          <div class="dest-banner__actions">
+            <a href="experiences.html?filter=القمم#exp-selected" class="exp-cta-btn">استكشف التجارب</a>
+            <button class="exp-cta-btn dest-banner__ghost" type="button" data-save="dest:abha">احفظ الوجهة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="script.js?v=35"></script>
 </body>
 </html>

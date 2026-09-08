@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>صفحة الخطأ | عسير</title>
-  <link rel="stylesheet" href="style.css">
+  <title>الصفحة غير موجودة | عسير</title>
+  <link rel="stylesheet" href="style.css?v=205">
 </head>
-<body data-page="home" data-header="solid">
-<section class="error-page">
-  <div>
-    <p class="code">404</p>
-    <h1>الصفحة غير موجودة</h1>
-    <p class="muted">يبدو أنك تائه بين قمم عسير! الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
-    <form action="search.html" method="get" class="search-wrap">
-      <input class="search-field" name="q" placeholder="ابحث عن تجربة أو مكان أو نشاط...">
-      <img class="search-icon" src="assets/icons/search.svg" width="20" height="20" alt="">
-    </form>
-    <div class="hero-actions">
-      <a class="btn btn-gold dark-text" href="index.html">العودة للرئيسية</a>
-      <a class="btn btn-outline" href="abha.html">استكشف عسير</a>
+<body data-page="error" data-header="solid">
+
+  <section class="err-page" aria-labelledby="err-title">
+    <div class="container err-page__inner">
+      <p class="err-page__code" aria-hidden="true">404</p>
+      <h1 id="err-title">الصفحة غير موجودة</h1>
+      <p class="err-page__sub">يبدو أنك تائه بين قمم عسير! الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+
+      <form class="err-search" action="search.html" method="get" role="search">
+        <label class="err-search__field">
+          <span class="err-search__ico" aria-hidden="true">⌕</span>
+          <input type="search" name="q" placeholder="ابحث عن تجربة أو مكان أو نشاط...">
+        </label>
+      </form>
+
+      <div class="err-actions">
+        <!-- RTL: primary (home) first = rightmost -->
+        <a class="err-btn err-btn--gold" href="index.html">العودة للرئيسية</a>
+        <a class="err-btn err-btn--ghost" href="index.html#regions">استكشف عسير</a>
+      </div>
     </div>
-  </div>
-</section>
-<script src="script.js"></script>
+  </section>
+
+  <script src="script.js?v=64"></script>
 </body>
 </html>
